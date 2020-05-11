@@ -1,0 +1,9 @@
+{
+  "libraryName": "React essentials",
+  "framework": "next",
+  "gitUrl": "//github.com/prismicio/essential-slices",
+  "pathToLibrary": "src",
+  "dependencies": [],
+  "css": [],
+  "devDependencies": []
+}

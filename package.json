@@ -1,0 +1,48 @@
+{
+  "name": "essential-slices",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "build": "microbundle && yarn run bundle",
+    "bundle": "node ./node_modules/sm-commons/scripts/bundle"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prismicio/essential-slices.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prismicio/essential-slices/issues"
+  },
+  "homepage": "https://github.com/prismicio/essential-slices#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "babel-loader": "^8.1.0",
+    "microbundle": "^0.12.0",
+    "sm-commons": "^0.0.20",
+    "prismic-reactjs": "^1.3.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "peerDependencies": {
+    "prismic-reactjs": "^1.3.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
