@@ -1,11 +1,11 @@
-import React from 'react';
-import CallToAction from '.';
+import React from 'react'
+import CallToAction from '.'
 import mock from './mock.json'
 
 export default {
   title: 'CallToAction',
   component: CallToAction,
-};
+}
 
 function linkResolver(doc) {
   return `/link/to/${doc.uid}`
@@ -17,4 +17,4 @@ export const Simple = () => (
 
 Simple.story = {
   name: 'Simple Example',
-};
+}

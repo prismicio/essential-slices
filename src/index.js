@@ -1,1 +1,3 @@
-export const Hello = () => <div>hi!</div>
+import React from 'react'
+
+export default () => <div>hi!</div>

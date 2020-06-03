@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { RichText } from "prismic-reactjs";
-import { Box } from "theme-ui";
-import uuid from "react-uuid";
-import { Slice, Wrap } from "../../components";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { RichText } from 'prismic-reactjs'
+import { Box } from 'theme-ui'
+import uuid from 'react-uuid'
+import { Slice, Wrap } from '../../components'
 
 const CustomerLogos = ({ slice }) => {
-  const { items, primary } = slice;
+  const { items, primary } = slice
   return (
-    <Slice sx={{ backgroundColor: "secondary", textAlign: "center" }}>
+    <Slice sx={{ backgroundColor: 'secondary', textAlign: 'center' }}>
       <Wrap>
         <Box color="primary">
           <RichText render={primary.eyebrow_headline} />
@@ -17,14 +17,14 @@ const CustomerLogos = ({ slice }) => {
           <Box
             as="ul"
             __css={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))",
-              gridColumnGap: "hPadding",
-              gridRowGap: "vMargin",
-              alignItems: "center",
-              listStyleType: "none",
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
+              gridColumnGap: 'hPadding',
+              gridRowGap: 'vMargin',
+              alignItems: 'center',
+              listStyleType: 'none',
               mx: 0,
-              my: "vMargin",
+              my: 'vMargin',
               p: 0,
             }}
           >
@@ -32,7 +32,7 @@ const CustomerLogos = ({ slice }) => {
               <Box as="li" key={uuid()}>
                 <Box
                   as="img"
-                  __css={{ m: "0 auto" }}
+                  __css={{ m: '0 auto' }}
                   src={item.logo.url}
                   alt={item.logo.alt}
                   width={item.logo.dimensions.width}
@@ -47,8 +47,8 @@ const CustomerLogos = ({ slice }) => {
         </Box>
       </Wrap>
     </Slice>
-  );
-};
+  )
+}
 
 CustomerLogos.propTypes = {
   slice: PropTypes.shape({
@@ -61,6 +61,6 @@ CustomerLogos.propTypes = {
     }).isRequired,
     items: PropTypes.array.isRequired,
   }).isRequired,
-};
+}
 
-export default CustomerLogos;
+export default CustomerLogos

@@ -1,34 +1,25 @@
 import React from 'react'
-import {
-  array,
-  func,
-  shape,
-  elementType
-} from 'prop-types'
+import { array, func, shape } from 'prop-types'
 
 import { RichText } from 'prismic-reactjs'
-import { Button } from '../../components'
+import { Button, Wrap } from '../../components'
 
 const CallToAction = ({
-  Wrapper = 'section',
   slice: { primary },
 
   linkResolver, // linkResolver is pased by SliceZone
 }) => {
   return (
-    <Wrapper>
+    <Wrap>
       <RichText render={primary.title} />
-      {
-        primary.paragraph &&
-          <RichText render={primary.paragraph} />
-      }
+      {primary.paragraph && <RichText render={primary.paragraph} />}
       <Button
-        variant='primary'
+        variant="primary"
         link={primary.button_link}
         label={primary.button_label}
-        resolver={ linkResolver}
+        resolver={linkResolver}
       />
-    </Wrapper>
+    </Wrap>
   )
 }
 
@@ -39,7 +30,12 @@ CallToAction.propTypes = {
     }).isRequired,
   }).isRequired,
   linkResolver: func,
-  LinkComponent: elementType
-};
+}
+
+CallToAction.defaultProps = {
+  linkResolver: () => {
+    return '/404'
+  },
+}
 
 export default CallToAction

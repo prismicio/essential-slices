@@ -9,25 +9,25 @@ module.exports = {
   },
   settings: {
     react: {
-      pragma: "React",
-      version: "detect",
+      pragma: 'React',
+      version: 'detect',
     },
   },
-  extends: ["airbnb", "plugin:prettier/recommended"],
+  extends: ['airbnb', 'plugin:prettier/recommended'],
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: "module",
+    sourceType: 'module',
   },
   rules: {
-    "react/jsx-filename-extension": [
+    'react/jsx-filename-extension': [
       1,
       {
-        extensions: [".js", ".jsx"],
+        extensions: ['.js', '.jsx'],
       },
     ],
-    "import/no-cycle": 0,
-    "no-underscore-dangle": 0,
-    "jsx-a11y/anchor-is-valid": 0,
-    "react/jsx-props-no-spreading": "off",
+    'import/no-cycle': 0,
+    'no-underscore-dangle': 0,
+    'jsx-a11y/anchor-is-valid': 0,
+    'react/jsx-props-no-spreading': 'off',
   },
 }
