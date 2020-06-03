@@ -28,6 +28,13 @@ export default {
   },
   breakpoints: container,
   buttons: {
+    default: {
+      bg: "gray",
+      color: "white",
+      "&:hover": {
+        backgroundColor: "primaryDark",
+      },
+    },
     primary: {
       bg: "primary",
       color: "white",
