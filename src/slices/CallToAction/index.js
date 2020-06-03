@@ -7,16 +7,13 @@ import {
 } from 'prop-types'
 
 import { RichText } from 'prismic-reactjs'
-
-import { handleLinkProps as defaultHandleLinkProps } from '../../utils/handleLinkProps'
+import { Button } from '../../components'
 
 const CallToAction = ({
   Wrapper = 'section',
   slice: { primary },
-  
+
   linkResolver, // linkResolver is pased by SliceZone
-  LinkComponent = 'a',
-  handleLinkProps = defaultHandleLinkProps
 }) => {
   return (
     <Wrapper>
@@ -25,12 +22,11 @@ const CallToAction = ({
         primary.paragraph &&
           <RichText render={primary.paragraph} />
       }
-      <LinkComponent
-        {...handleLinkProps(
-          primary.button_link,
-          primary.button_label,
-          linkResolver
-        )}
+      <Button
+        variant='primary'
+        link={primary.button_link}
+        label={primary.button_label}
+        resolver={ linkResolver}
       />
     </Wrapper>
   )
