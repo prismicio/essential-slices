@@ -1,1 +1,5 @@
 export { default as Button } from './Button'
+export { default as Desc } from './Desc'
+export { default as Head } from './Head'
+export { default as Slice } from './Slice'
+export { default as Wrap } from './Wrap'
