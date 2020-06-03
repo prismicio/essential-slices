@@ -1,7 +1,7 @@
 import React from 'react'
-import PropTypes, { elementType } from 'prop-types'
+import PropTypes from 'prop-types'
 import { Link, Richtext } from 'prismic-reactjs'
-import { Box } from  'theme-ui'
+import { Box } from 'theme-ui'
 
 function Button({ link, label, linkResolver, ...props }) {
   const buttonStyles = {
@@ -30,9 +30,9 @@ function Button({ link, label, linkResolver, ...props }) {
   return (
     <Box
       as={elementType}
-      variant='default'
+      variant="default"
       {...props}
-      __themeKey='buttons'
+      __themeKey="buttons"
       __css={buttonStyles}
       {...linkProps}
     >
@@ -41,11 +41,15 @@ function Button({ link, label, linkResolver, ...props }) {
   )
 }
 
-PropTypes.defaultProps = {
-  linkResolver: () => { return '/404' }
+Button.defaultProps = {
+  linkResolver: () => {
+    return '/404'
+  },
+  link: null,
+  label: null,
 }
 
-PropTypes.propTypes = {
+Button.propTypes = {
   link: PropTypes.shape({}),
   label: PropTypes.string,
   linkResolver: PropTypes.func,

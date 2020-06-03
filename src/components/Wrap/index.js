@@ -1,13 +1,13 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Box } from "theme-ui"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Box } from 'theme-ui'
 
 const Wrap = ({ children, ...props }) => {
   return (
     <Box
       __css={{
-        mx: "auto",
-        maxWidth: [null, null, "80%", "75%"],
+        mx: 'auto',
+        maxWidth: [null, null, '80%', '75%'],
       }}
       {...props}
     >

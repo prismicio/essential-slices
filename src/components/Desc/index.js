@@ -1,17 +1,17 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Box } from "theme-ui"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Box } from 'theme-ui'
 
 const Desc = ({ children, ...props }) => {
   return (
     <Box
       __css={{
         mx: [null, null, 'auto'],
-        mt: ["vMargin", null, "vMargin2x"],
+        mt: ['vMargin', null, 'vMargin2x'],
         maxWidth: '42rem',
         fontSize: 'lg',
         fontWeight: 'lean',
-        'p': {
+        p: {
           lineHeight: 'desc',
         },
         'p:last-of-type': {
