@@ -1,7 +1,7 @@
 import React from "react"
 import { action } from "@storybook/addon-actions"
 import { addDecorator, addParameters } from "@storybook/react"
-import { ThemeProvider } from "theme-ui"
+import { ThemeProvider, BaseStyles } from "theme-ui"
 import { DocsPage, DocsContainer } from "@storybook/addon-docs/blocks"
 import theme from "../src/theme"
 
@@ -20,7 +20,9 @@ window.___navigate = (pathname) => {
 
 addDecorator((Story) => (
   <ThemeProvider theme={theme}>
-    <Story />
+    <BaseStyles>
+      <Story />
+    </BaseStyles>
   </ThemeProvider>
 ))
 
