@@ -84,8 +84,8 @@ export default {
     border: '#ccc',
     modes: {
       dark: {
-        background: '#000',
-        text: '#fff',
+        background: baseColors.grey0,
+        text: baseColors.white,
       },
     },
   },
