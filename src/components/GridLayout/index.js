@@ -18,7 +18,7 @@ const columnOptions = (columns) =>
   columns ? countToColumns(columns) : 'repeat(auto-fit, minmax(150px, 1fr))'
 
 const Grid = React.forwardRef(
-  ({ width, columns, gap, columnGap, ...props }, ref) => {
+  ({ width, columns, rowGap, columnGap, ...props }, ref) => {
     const gridTemplateColumns = width
       ? widthToColumns(width)
       : columnOptions(columns)
@@ -29,7 +29,7 @@ const Grid = React.forwardRef(
         {...props}
         __css={{
           display: 'grid',
-          gridGap: gap,
+          gridRowGap: rowGap,
           columnGap,
           gridTemplateColumns,
         }}
@@ -41,14 +41,14 @@ const Grid = React.forwardRef(
 Grid.defaultProps = {
   columns: undefined,
   columnGap: undefined,
-  gap: undefined,
+  rowGap: undefined,
   width: undefined,
 }
 
 Grid.propTypes = {
   columns: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   columnGap: PropTypes.number,
-  gap: PropTypes.number,
+  rowGap: PropTypes.number,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
