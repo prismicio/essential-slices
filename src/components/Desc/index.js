@@ -6,10 +6,10 @@ const Desc = ({ children, ...props }) => {
   return (
     <Box
       __css={{
-        mx: [null, null, 'auto'],
-        mt: ['vMargin', null, 'vMargin2x'],
-        maxWidth: '42rem',
-        fontSize: 'lg',
+        mx: 'auto',
+        mb: 'hPadding',
+        maxWidth: '38rem',
+        fontSize: ['kicker', null, null, 'lg'],
         fontWeight: 'lean',
         p: {
           lineHeight: 'desc',

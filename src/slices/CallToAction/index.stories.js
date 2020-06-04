@@ -3,7 +3,7 @@ import CallToAction from '.'
 import mock from './mock.json'
 
 export default {
-  title: 'CallToAction',
+  title: 'Slices/CallToAction',
   component: CallToAction,
 }
 

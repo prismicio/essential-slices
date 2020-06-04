@@ -1,7 +1,11 @@
-const container = ['340px', '768px', '1024px', '1280px']
+const breakpoints = [
+  `640px`, // 40rem
+  `896px`, // 56rem
+  `1280px`, // 80rem
+]
 
 const baseColors = {
-  primary: '#8592e0',
+  primary: '#1b836d',
   primaryDark: '#16745f',
   primaryDarker: '#0d5e4c',
   secondary: '#f4f0ec',
@@ -11,6 +15,21 @@ const baseColors = {
   grey53: '#878787',
   white: '#fff',
 }
+
+const headings = {
+  level: {
+    1: {
+      fontSize: [
+        '1.625rem', // 26px
+        '2rem', // 32px
+        '2.5rem', // 40px
+        '2.75rem', // 44px
+      ],
+      lineHeight: 1.3,
+    },
+  },
+}
+
 export default {
   background: {
     default: {
@@ -26,7 +45,7 @@ export default {
       color: 'dark',
     },
   },
-  breakpoints: container,
+  breakpoints,
   buttons: {
     default: {
       bg: 'gray',
@@ -132,11 +151,16 @@ export default {
     full: '100%',
   },
   space: {
+    hPadding2d: '1rem',
     hPadding: '2rem',
     cPadding: '1.25rem',
+
     cMargin: '1rem',
+
+    vMargin2d: '1.25rem',
     vMargin: '2.5rem',
     vMargin2x: '5rem',
+
     vSpace: '8vw',
   },
   styles: {
@@ -150,10 +174,17 @@ export default {
       m: 0,
       p: 0,
     },
+    'h1, h2, h3, h4': {
+      m: 0,
+    },
+    h1: {
+      ...headings.level[1],
+    },
     p: {
       fontSize: 'body',
       color: 'body',
       mb: 4,
+      mt: 0,
     },
     img: {
       maxWidth: '100%',

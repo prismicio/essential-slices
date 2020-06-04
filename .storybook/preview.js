@@ -1,7 +1,7 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { addDecorator, addParameters } from '@storybook/react'
-import { ThemeProvider } from 'theme-ui'
+import { ThemeProvider, BaseStyles } from 'theme-ui'
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
 import { withThemeProvider } from 'storybook-addon-color-mode'
 
@@ -19,6 +19,14 @@ global.__PATH_PREFIX__ = ''
 window.___navigate = (pathname) => {
   action('NavigateTo:')(pathname)
 }
+
+addDecorator((Story) => (
+  <ThemeProvider theme={theme}>
+    <BaseStyles>
+      <Story />
+    </BaseStyles>
+  </ThemeProvider>
+))
 
 addParameters({
   docs: {
