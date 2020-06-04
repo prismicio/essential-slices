@@ -47,7 +47,7 @@ const PricingTable = ({
           <Box as="header">
             {eyebrow_headline && (
               <Box
-                sx={{
+                __css={{
                   mb: '.6em',
                   color: 'primary',
                   fontSize: 'lg',
@@ -74,14 +74,14 @@ const PricingTable = ({
                     <Box as="header">
                       <h3>{RichText.asText(item.plan_title)}</h3>
                       <Box
-                        sx={{
+                        __css={{
                           color: 'textGrey',
                         }}
                       >
                         {RichText.asText(item.price_option)}
                       </Box>
                     </Box>
-                    <Box sx={features}>
+                    <Box __css={features}>
                       <RichText
                         htmlSerializer={featuresSerializer}
                         render={item.features}
