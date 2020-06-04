@@ -19,7 +19,7 @@ const CustomerLogos = ({ slice }) => {
               <Box key={uuid()}>
                 <Box
                   as="img"
-                  __css={{ m: 'auto', display: 'block' }}
+                  __css={{ mx: 'auto', display: 'block' }}
                   src={item.logo.url}
                   alt={item.logo.alt}
                   width={item.logo.dimensions.width}
