@@ -15,10 +15,11 @@ const CallToAction = ({
       mb: ['hPadding2d', null, 'hPadding'],
     },
     icon: {
-      width: 'full',
-      maxWidth: '120px',
       mb: 'cMargin',
       mx: 'auto',
+      img: {
+        width: '120px',
+      },
     },
   }
 
@@ -27,12 +28,9 @@ const CallToAction = ({
       <Wrap>
         <Box as="header" __css={styles.header}>
           {primary.icon_image && (
-            <Box
-              as="img"
-              alt={primary.icon_image.alt}
-              src={primary.icon_image.url}
-              __css={styles.icon}
-            />
+            <Box __css={styles.icon}>
+              <img alt={primary.icon_image.alt} src={primary.icon_image.url} />
+            </Box>
           )}
           <RichText render={primary.title} />
         </Box>
