@@ -29,7 +29,7 @@ const CallToAction = ({
   return (
     <Slice sx={{ textAlign: 'center' }}>
       <Wrap>
-        <Box as="header" sx={styles.header}>
+        <Box as="header" __css={styles.header}>
           {primary.icon_image && (
             <Box __css={styles.icon}>
               <img src={primary.icon_image.url} alt={primary.icon_image.alt} />
