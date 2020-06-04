@@ -5,7 +5,7 @@ const breakpoints = [
 ]
 
 const baseColors = {
-  primary: '#8592e0',
+  primary: '#1b836d',
   primaryDark: '#16745f',
   primaryDarker: '#0d5e4c',
   secondary: '#f4f0ec',
@@ -151,11 +151,16 @@ export default {
     full: '100%',
   },
   space: {
+    hPadding2d: '1rem',
     hPadding: '2rem',
     cPadding: '1.25rem',
+
     cMargin: '1rem',
+
+    vMargin2d: '1.25rem',
     vMargin: '2.5rem',
     vMargin2x: '5rem',
+
     vSpace: '8vw',
   },
   styles: {

@@ -7,7 +7,7 @@ const Desc = ({ children, ...props }) => {
     <Box
       __css={{
         mx: 'auto',
-        mb: ['vMargin', null, 'vMargin2x'],
+        mb: ['hPadding'],
         maxWidth: '42rem',
         fontSize: ['kicker', null, null, 'lg'],
         fontWeight: 'lean',

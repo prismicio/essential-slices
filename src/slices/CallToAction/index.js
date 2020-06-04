@@ -12,7 +12,7 @@ const CallToAction = ({
 }) => {
   const styles = {
     header: {
-      mb: [null, 'hPadding'],
+      mb: ['hPadding2d', null, 'hPadding'],
     },
     icon: {
       width: 'full',
