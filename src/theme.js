@@ -1,4 +1,8 @@
-const container = ['340px', '768px', '1024px', '1280px']
+const breakpoints = [
+  `768px`, // 48rem
+  `1024px`, // 64rem
+  `1280px`, // 80rem
+]
 
 const baseColors = {
   primary: '#8592e0',
@@ -11,6 +15,19 @@ const baseColors = {
   grey53: '#878787',
   white: '#fff',
 }
+
+const headings = {
+  level_1: {
+    fontSize: [
+      '1.625rem', // 26px
+      '2rem', // 32px
+      '2.5rem', // 40px
+      '2.75rem', // 44px
+    ],
+    lineHeight: 1.3,
+  },
+}
+
 export default {
   background: {
     default: {
@@ -26,7 +43,7 @@ export default {
       color: 'dark',
     },
   },
-  breakpoints: container,
+  breakpoints,
   buttons: {
     default: {
       bg: 'gray',
@@ -144,10 +161,17 @@ export default {
       m: 0,
       p: 0,
     },
+    'h1, h2, h3, h4': {
+      m: 0,
+    },
+    h1: {
+      ...headings.level_1,
+    },
     p: {
       fontSize: 'body',
       color: 'body',
       mb: 4,
+      mt: 0,
     },
     img: {
       maxWidth: '100%',
