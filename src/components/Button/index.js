@@ -6,7 +6,6 @@ import { Box } from 'theme-ui'
 function Button({ link, label, linkResolver, ...props }) {
   const buttonStyles = {
     p: '1em 3em',
-    mb: 0,
     textAlign: 'center',
     width: 'auto',
     display: ['block', 'inline-block'],
