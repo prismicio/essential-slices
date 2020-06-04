@@ -186,9 +186,6 @@ export default {
       mb: 4,
       mt: 0,
     },
-    img: {
-      maxWidth: '100%',
-    },
   },
   text: {
     desc: {
