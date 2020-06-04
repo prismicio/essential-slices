@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { RichText } from 'prismic-reactjs'
 import { Box } from 'theme-ui'
 import uuid from 'react-uuid'
-import { Slice, Wrap } from '../../components'
+import { Grid, Slice, Wrap } from '../../components'
 
 const CustomerLogos = ({ slice }) => {
   const { items, primary } = slice
@@ -14,32 +14,19 @@ const CustomerLogos = ({ slice }) => {
           <RichText render={primary.eyebrow_headline} />
         </Box>
         <Box>
-          <Box
-            as="ul"
-            __css={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
-              gridColumnGap: 'hPadding',
-              gridRowGap: 'vMargin',
-              alignItems: 'center',
-              listStyleType: 'none',
-              mx: 0,
-              my: 'vMargin',
-              p: 0,
-            }}
-          >
+          <Grid rowGap="vMargin" columnGap="hPadding">
             {items.map((item) => (
-              <Box as="li" key={uuid()}>
+              <Box key={uuid()}>
                 <Box
                   as="img"
-                  __css={{ m: '0 auto' }}
+                  __css={{ m: 'auto', display: 'block' }}
                   src={item.logo.url}
                   alt={item.logo.alt}
                   width={item.logo.dimensions.width}
                 />
               </Box>
             ))}
-          </Box>
+          </Grid>
 
           <Box as="a" href={primary.call_to_action_link.url}>
             <RichText render={primary.call_to_action} />
