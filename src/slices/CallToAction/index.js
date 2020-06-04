@@ -19,10 +19,6 @@ const CallToAction = ({
       maxWidth: '120px',
       mb: 'cMargin',
       mx: 'auto',
-
-      img: {
-        width: '100%',
-      },
     },
   }
 
@@ -31,20 +27,27 @@ const CallToAction = ({
       <Wrap>
         <Box as="header" __css={styles.header}>
           {primary.icon_image && (
-            <Box __css={styles.icon}>
-              <img src={primary.icon_image.url} alt={primary.icon_image.alt} />
-            </Box>
+            <Box
+              as="img"
+              alt={primary.icon_image.alt}
+              src={primary.icon_image.url}
+              __css={styles.icon}
+            />
           )}
           <RichText render={primary.title} />
         </Box>
-        <Desc>
-          {primary.paragraph && <RichText render={primary.paragraph} />}
-        </Desc>
+
+        {primary.paragraph && (
+          <Desc>
+            <RichText render={primary.paragraph} />
+          </Desc>
+        )}
+
         <Button
-          variant="primary"
-          link={primary.button_link}
           label={primary.button_label}
+          link={primary.button_link}
           resolver={linkResolver}
+          variant="primary"
         />
       </Wrap>
     </Slice>
