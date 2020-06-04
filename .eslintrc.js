@@ -19,12 +19,8 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'react/jsx-filename-extension': [
-      1,
-      {
-        extensions: ['.js', '.jsx'],
-      },
-    ],
+    camelcase: [2, { properties: 'never' }],
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'import/no-cycle': 0,
     'no-underscore-dangle': 0,
     'jsx-a11y/anchor-is-valid': 0,
