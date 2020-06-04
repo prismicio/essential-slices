@@ -1,9 +1,11 @@
-import React from "react"
-import { action } from "@storybook/addon-actions"
-import { addDecorator, addParameters } from "@storybook/react"
-import { ThemeProvider, BaseStyles } from "theme-ui"
-import { DocsPage, DocsContainer } from "@storybook/addon-docs/blocks"
-import theme from "../src/theme"
+import React from 'react'
+import { action } from '@storybook/addon-actions'
+import { addDecorator, addParameters } from '@storybook/react'
+import { ThemeProvider, BaseStyles } from 'theme-ui'
+import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
+import { withThemeProvider } from 'storybook-addon-color-mode'
+
+import theme from '../src/theme'
 
 // Gatsby's Link overrides:
 // Gatsby defines a global called ___loader to prevent its method calls from creating console errors you override it here
@@ -12,10 +14,10 @@ global.___loader = {
   hovering: () => {},
 }
 // Gatsby internal mocking to prevent unnecessary errors in storybook testing environment
-global.__PATH_PREFIX__ = ""
+global.__PATH_PREFIX__ = ''
 // This is to utilized to override the window.___navigate method Gatsby defines and uses to report what path a Link would be taking us to if it wasn't inside a storybook
 window.___navigate = (pathname) => {
-  action("NavigateTo:")(pathname)
+  action('NavigateTo:')(pathname)
 }
 
 addDecorator((Story) => (
@@ -31,4 +33,13 @@ addParameters({
     container: DocsContainer,
     page: DocsPage,
   },
+  colorMode: {
+    modes: {
+      dark: {
+        name: 'Dark',
+      },
+    },
+  },
 })
+
+addDecorator(withThemeProvider(theme))
