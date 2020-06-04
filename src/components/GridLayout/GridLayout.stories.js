@@ -9,6 +9,37 @@ export default {
 }
 
 export const Default = () => (
+  <Box bg="grey90" p="1rem">
+    <GridLayout>
+      <Box bg="primary" color="white">
+        Number of columns not specified
+      </Box>
+      <Box bg="white">Number of columns not specified</Box>
+      <Box bg="primary" color="white">
+        Number of columns not specified
+      </Box>
+      <Box bg="white">Number of columns not specified</Box>
+      <Box bg="primary" color="white">
+        Number of columns not specified
+      </Box>
+      <Box bg="white">Number of columns not specified</Box>
+      <Box bg="primary" color="white">
+        Number of columns not specified
+      </Box>
+      <Box bg="white">Number of columns not specified</Box>
+      <Box bg="primary" color="white">
+        Number of columns not specified
+      </Box>
+      <Box bg="white">Number of columns not specified</Box>
+      <Box bg="primary" color="white">
+        Number of columns not specified
+      </Box>
+      <Box bg="white">Number of columns not specified</Box>
+    </GridLayout>
+  </Box>
+)
+
+export const Columns = () => (
   <>
     <Box bg="grey90" p="1rem">
       <GridLayout columns={[1, 2]}>
@@ -61,34 +92,11 @@ export const Default = () => (
         <Box bg="white">1/4</Box>
       </GridLayout>
     </Box>
-    <Box bg="grey90" p="1rem">
-      <GridLayout>
-        <Box bg="primary" color="white">
-          Number of columns not specified
-        </Box>
-        <Box bg="white">Number of columns not specified</Box>
-        <Box bg="primary" color="white">
-          Number of columns not specified
-        </Box>
-        <Box bg="white">Number of columns not specified</Box>
-        <Box bg="primary" color="white">
-          Number of columns not specified
-        </Box>
-        <Box bg="white">Number of columns not specified</Box>
-        <Box bg="primary" color="white">
-          Number of columns not specified
-        </Box>
-        <Box bg="white">Number of columns not specified</Box>
-        <Box bg="primary" color="white">
-          Number of columns not specified
-        </Box>
-        <Box bg="white">Number of columns not specified</Box>
-        <Box bg="primary" color="white">
-          Number of columns not specified
-        </Box>
-        <Box bg="white">Number of columns not specified</Box>
-      </GridLayout>
-    </Box>
+  </>
+)
+
+export const Width = () => (
+  <>
     <Box bg="grey90" p="1rem">
       <GridLayout width="200px">
         <Box bg="primary" color="white">
