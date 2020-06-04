@@ -82,6 +82,12 @@ export default {
     background: baseColors.white,
     body: baseColors.grey0,
     border: '#ccc',
+    modes: {
+      dark: {
+        background: '#000',
+        text: '#fff',
+      },
+    },
   },
   container: {
     inner: {
@@ -135,7 +141,7 @@ export default {
   },
   styles: {
     root: {
-      color: 'dark',
+      color: 'text',
       bg: 'background',
       fontSize: 'base',
       fontFamily: 'body',
