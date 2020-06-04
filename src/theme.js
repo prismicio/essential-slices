@@ -17,14 +17,16 @@ const baseColors = {
 }
 
 const headings = {
-  level_1: {
-    fontSize: [
-      '1.625rem', // 26px
-      '2rem', // 32px
-      '2.5rem', // 40px
-      '2.75rem', // 44px
-    ],
-    lineHeight: 1.3,
+  level: {
+    1: {
+      fontSize: [
+        '1.625rem', // 26px
+        '2rem', // 32px
+        '2.5rem', // 40px
+        '2.75rem', // 44px
+      ],
+      lineHeight: 1.3,
+    },
   },
 }
 
@@ -165,7 +167,7 @@ export default {
       m: 0,
     },
     h1: {
-      ...headings.level_1,
+      ...headings.level[1],
     },
     p: {
       fontSize: 'body',
