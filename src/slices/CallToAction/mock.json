@@ -12,16 +12,20 @@
       "copyright": null,
       "url": "https://images.prismic.io/slicesexamples/0a64ab37-8ba3-4882-a766-53bad869d3cf_cta-eyebrow-icon.svg?auto=compress,format&w=900"
     },
-    "title": [{
-      "type": "heading1",
-      "text": "Collector Slices kit",
-      "spans": []
-    }],
-    "paragraph": [{
-      "type": "paragraph",
-      "text": "It’s very easy to create stylish and beautiful prototypes for your future projects, both graphical and dynamic.",
-      "spans": []
-    }],
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Collector Slices kit",
+        "spans": []
+      }
+    ],
+    "paragraph": [
+      {
+        "type": "paragraph",
+        "text": "It’s very easy to create stylish and beautiful prototypes for your future projects, both graphical and dynamic.",
+        "spans": []
+      }
+    ],
     "button_link": {
       "link_type": "Web",
       "url": "https://prismic.io"
