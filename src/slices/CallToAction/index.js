@@ -29,7 +29,11 @@ const CallToAction = ({
         <Box as="header" __css={styles.header}>
           {primary.icon_image && (
             <Box __css={styles.icon}>
-              <img alt={primary.icon_image.alt} src={primary.icon_image.url} />
+              <Box
+                as="img"
+                alt={primary.icon_image.alt}
+                src={primary.icon_image.url}
+              />
             </Box>
           )}
           <RichText render={primary.title} />
