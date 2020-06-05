@@ -1,4 +1,5 @@
 export { default as Button } from './Button'
+export { default as Card } from './Card'
 export { default as Desc } from './Desc'
 export { default as Eyebrow } from './Eyebrow'
 export { default as Grid } from './GridLayout'
