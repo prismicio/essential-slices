@@ -1,0 +1,98 @@
+/* eslint-disable react/prop-types */
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Box } from 'theme-ui'
+import SlickSlider from 'react-slick'
+import './slick.css'
+
+const NextArrow = (props) => {
+  const { onClick } = props
+  return (
+    <Box
+      as="button"
+      type="button"
+      __themeKey="buttons"
+      variant="arrow"
+      onClick={onClick}
+      __css={{
+        right: ['35%', null, null, '-52px'],
+      }}
+      aria-label="Next"
+    >
+      <svg
+        width="8"
+        height="12"
+        viewBox="0 0 8 12"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <g fill="none" fillRule="evenodd">
+          <path d="M-8-6h24v24H-8z" />
+          <path
+            fill="currentColor"
+            fillRule="nonzero"
+            d="M.59 10.59L5.17 6 .59 1.41 2 0l6 6-6 6z"
+          />
+        </g>
+      </svg>
+    </Box>
+  )
+}
+
+const PrevArrow = (props) => {
+  const { onClick } = props
+  return (
+    <Box
+      as="button"
+      type="button"
+      __themeKey="buttons"
+      variant="arrow"
+      onClick={onClick}
+      __css={{
+        left: ['35%', null, null, '-52px'],
+      }}
+      aria-label="Previous"
+    >
+      <svg
+        width="8"
+        height="12"
+        viewBox="0 0 8 12"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <g fill="none" fillRule="evenodd">
+          <path d="M-8-6h24v24H-8z" />
+          <path
+            fill="currentColor"
+            fillRule="nonzero"
+            d="M7.41 10.59L2.83 6l4.58-4.59L6 0 0 6l6 6z"
+          />
+        </g>
+      </svg>
+    </Box>
+  )
+}
+
+const Slider = ({ children, speed, ...props }) => {
+  return (
+    <SlickSlider
+      speed={speed}
+      nextArrow={<NextArrow />}
+      prevArrow={<PrevArrow />}
+      {...props}
+    >
+      {children}
+    </SlickSlider>
+  )
+}
+
+Slider.defaultProps = {
+  speed: 500,
+}
+
+Slider.propTypes = {
+  children: PropTypes.node.isRequired,
+  speed: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+}
+
+export default Slider
