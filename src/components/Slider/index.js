@@ -5,8 +5,24 @@ import { Box } from 'theme-ui'
 import SlickSlider from 'react-slick'
 import './slick.css'
 
+const arrowStyles = {
+  cursor: 'pointer',
+  borderRadius: '50%',
+  display: 'block',
+  fontSize: 0,
+  height: '2.75rem',
+  lineHeight: 0,
+  outline: 'none',
+  padding: '0.5rem',
+  position: 'absolute',
+  top: ['110%', null, null, '50%'],
+  transform: 'translate(0, -50%)',
+  width: '2.75rem',
+}
+
 const NextArrow = (props) => {
   const { onClick } = props
+
   return (
     <Box
       as="button"
@@ -16,6 +32,7 @@ const NextArrow = (props) => {
       onClick={onClick}
       __css={{
         right: ['35%', null, null, '-52px'],
+        ...arrowStyles,
       }}
       aria-label="Next"
     >
@@ -50,6 +67,7 @@ const PrevArrow = (props) => {
       onClick={onClick}
       __css={{
         left: ['35%', null, null, '-52px'],
+        ...arrowStyles,
       }}
       aria-label="Previous"
     >
