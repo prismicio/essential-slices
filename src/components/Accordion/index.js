@@ -8,12 +8,7 @@ const Accordion = ({ active, title, text, onClick }) => {
   return (
     <Box className="c-accordion">
       <Box>
-        <Box
-          data-accordion-heading
-          className="c-accordion__heading"
-          aria-level="3"
-          as="h3"
-        >
+        <Box data-accordion-heading className="c-accordion__heading">
           <Box
             as="button"
             aria-expanded={active}
@@ -48,10 +43,18 @@ const Accordion = ({ active, title, text, onClick }) => {
             data-accordion-toggle
             onClick={onClick}
           >
-            <RichText render={title} />
             <Box
               __css={{
-                display: 'block !important',
+                '*': {
+                  m: 0,
+                },
+              }}
+            >
+              <RichText render={title} />
+            </Box>
+            <Box
+              __css={{
+                display: 'block',
                 position: 'absolute',
                 width: '0.75rem',
                 top: '50%',
