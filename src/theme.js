@@ -167,6 +167,15 @@ export default {
     xxxlarge: '32rem', // 512px
   },
 
+  // Default Components
+
+  cards: {
+    default: {
+      bg: 'secondary',
+      color: 'dark',
+    },
+  },
+
   styles: {
     root: {
       color: 'text',
