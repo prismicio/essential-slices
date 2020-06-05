@@ -163,15 +163,13 @@ export default {
       p: 0,
     },
     'h1, h2, h3, h4': {
-      m: 0,
+      mt: 0,
     },
     h1: {
       ...headings.level[1],
     },
     p: {
       fontSize: 'body',
-      color: 'body',
-      mb: 4,
       mt: 0,
     },
     img: {
