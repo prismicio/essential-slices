@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Accordion from '.'
 import mock from './mock.json'
 
@@ -8,15 +8,5 @@ export default {
 }
 
 export const Default = () => {
-  const [active, setActive] = useState(false)
-  return (
-    <Accordion
-      active={active}
-      title={mock.items[0].title}
-      text={mock.items[0].text}
-      onClick={() => {
-        setActive(!active)
-      }}
-    />
-  )
+  return <Accordion slice={mock} />
 }
