@@ -12,14 +12,18 @@ const CardsCarousel = ({ slice }) => {
     <Slice>
       <Wrap sx={{ textAlign: ['left', null, 'center'] }}>
         <Box as="header">
-          <Eyebrow>
-            <RichText render={primary.eyebrow_headline} />
-          </Eyebrow>
+          {primary.eyebrow_headline && (
+            <Eyebrow>
+              <RichText render={primary.eyebrow_headline} />
+            </Eyebrow>
+          )}
           <RichText render={primary.title} />
         </Box>
-        <Desc mb="large">
-          <RichText render={primary.description} />
-        </Desc>
+        {primary.description && (
+          <Desc mb="large">
+            <RichText render={primary.description} />
+          </Desc>
+        )}
         <Box __css={{ width: 'full', maxWidth: '100vw' }}>
           <Slider
             infinite={false}
