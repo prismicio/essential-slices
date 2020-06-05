@@ -1,0 +1,32 @@
+{
+  "image": {
+    "dimensions": {
+      "width": 2048,
+      "height": 1536
+    },
+    "alt": "Title 1",
+    "copyright": null,
+    "url": "https://images.prismic.io/slicesexamples/b4aeb1e2-e9c1-43ab-82ab-0d0519f9c3cd_float.png?auto=compress,format"
+  },
+  "title": [
+    {
+      "type": "heading3",
+      "text": "Title 1",
+      "spans": []
+    }
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Content hello",
+      "spans": []
+    }
+  ],
+  "additional_info": [
+    {
+      "type": "paragraph",
+      "text": "",
+      "spans": []
+    }
+  ]
+}

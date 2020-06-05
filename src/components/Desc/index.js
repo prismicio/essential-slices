@@ -6,7 +6,7 @@ const Desc = ({ children, ...props }) => {
   return (
     <Box
       __css={{
-        mx: 'auto',
+        mx: [null, null, 'auto'],
         mb: 'hPadding',
         maxWidth: '38rem',
         fontSize: ['kicker', null, null, 'lg'],

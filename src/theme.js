@@ -144,17 +144,38 @@ export default {
     full: '100%',
   },
   space: {
+    // Legacy vuejs scales.
     hPaddingHalf: '1rem',
     hPadding: '2rem',
     cPadding: '1.25rem',
-
     cMargin: '1rem',
 
     vMargin: '2.5rem',
     vMargin2x: '5rem',
 
     vSpace: '8vw',
+
+    // New spaces scale.
+    none: 0,
+    xxsmall: '0.25rem', // 4px
+    xsmall: '0.5rem', // 8px
+    small: '1rem', // 16px
+    medium: '2rem', // 32px
+    large: '4rem', // 64px
+    xlarge: '8rem', // 128px
+    xxlarge: '16rem', // 256px
+    xxxlarge: '32rem', // 512px
   },
+
+  // Default Components
+
+  cards: {
+    default: {
+      bg: 'secondary',
+      color: 'dark',
+    },
+  },
+
   styles: {
     root: {
       color: 'text',
