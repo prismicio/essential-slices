@@ -6,9 +6,9 @@ import { Icon } from '..'
 
 const AccordionItem = ({ active, title, text, onClick, ...props }) => {
   return (
-    <Box className="c-accordion" {...props}>
+    <Box {...props}>
       <Box>
-        <Box data-accordion-heading className="c-accordion__heading">
+        <Box data-accordion-heading>
           <Box
             as="button"
             aria-expanded={active}
