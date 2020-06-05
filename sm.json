@@ -1,1 +1,94 @@
-{"libraryName":"React essentials","framework":"next","gitUrl":"//github.com/prismicio/essential-slices","pathToLibrary":"src","dependencies":[],"css":[],"devDependencies":[],"packageName":"essential-slices","package":{"name":"essential-slices","version":"1.0.0","description":"","source":"src/index.js","main":"dist/index.js","module":"dist/index.module.js","unpkg":"dist/index.umd.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1","storybook":"start-storybook -p 6006","build-storybook":"build-storybook","build":"microbundle && yarn run bundle","bundle":"node ./node_modules/sm-commons/scripts/bundle"},"repository":{"type":"git","url":"git+https://github.com/prismicio/essential-slices.git"},"keywords":[],"author":"","license":"ISC","bugs":{"url":"https://github.com/prismicio/essential-slices/issues"},"homepage":"https://github.com/prismicio/essential-slices#readme","dependencies":{},"devDependencies":{"@babel/core":"^7.9.6","@storybook/addon-actions":"^5.3.18","@storybook/addon-links":"^5.3.18","@storybook/addons":"^5.3.18","@storybook/react":"^5.3.18","babel-loader":"^8.1.0","microbundle":"^0.12.0","sm-commons":"^0.0.20"},"peerDependencies":{"prismic-reactjs":"^1.3.1","prop-types":"^15.7.2","react":"^16.13.1","react-dom":"^16.13.1"}},"slices":{"call_to_action":{"type":"Slice","fieldset":"Call to action","description":"A predesigned 'Call to action' for section for your site","icon":"notifications_active","display":"list","non-repeat":{"icon_image":{"type":"Image","config":{"constraint":{},"thumbnails":[],"label":"Icon Image"}},"title":{"type":"StructuredText","config":{"single":"heading1, heading2, heading3, heading4, heading5, heading6","label":"Title"}},"paragraph":{"type":"StructuredText","config":{"multi":"paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item","label":"Paragraph"}},"button_link":{"type":"Link","config":{"label":"Button Link"}},"button_label":{"type":"Text","config":{"label":"Button Label","placeholder":"Text for button"}}},"repeat":{}}}}
+{
+  "libraryName": "React essentials",
+  "framework": "next",
+  "gitUrl": "//github.com/prismicio/essential-slices",
+  "pathToLibrary": "src",
+  "dependencies": [],
+  "css": [],
+  "devDependencies": [],
+  "packageName": "essential-slices",
+  "package": {
+    "name": "essential-slices",
+    "version": "1.0.0",
+    "description": "",
+    "source": "src/index.js",
+    "main": "dist/index.js",
+    "module": "dist/index.module.js",
+    "unpkg": "dist/index.umd.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "storybook": "start-storybook -p 6006",
+      "build-storybook": "build-storybook",
+      "build": "microbundle && yarn run bundle",
+      "bundle": "node ./node_modules/sm-commons/scripts/bundle"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/prismicio/essential-slices.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": { "url": "https://github.com/prismicio/essential-slices/issues" },
+    "homepage": "https://github.com/prismicio/essential-slices#readme",
+    "dependencies": {},
+    "devDependencies": {
+      "@babel/core": "^7.9.6",
+      "@storybook/addon-actions": "^5.3.18",
+      "@storybook/addon-links": "^5.3.18",
+      "@storybook/addons": "^5.3.18",
+      "@storybook/react": "^5.3.18",
+      "babel-loader": "^8.1.0",
+      "microbundle": "^0.12.0",
+      "sm-commons": "^0.0.20"
+    },
+    "peerDependencies": {
+      "prismic-reactjs": "^1.3.1",
+      "prop-types": "^15.7.2",
+      "react": "^16.13.1",
+      "react-dom": "^16.13.1"
+    }
+  },
+  "slices": {
+    "call_to_action": {
+      "type": "Slice",
+      "fieldset": "Call to action",
+      "description": "A predesigned 'Call to action' for section for your site",
+      "icon": "notifications_active",
+      "display": "list",
+      "non-repeat": {
+        "icon_image": {
+          "type": "Image",
+          "config": {
+            "constraint": {},
+            "thumbnails": [],
+            "label": "Icon Image"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+            "label": "Title"
+          }
+        },
+        "paragraph": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+            "label": "Paragraph"
+          }
+        },
+        "button_link": { "type": "Link", "config": { "label": "Button Link" } },
+        "button_label": {
+          "type": "Text",
+          "config": {
+            "label": "Button Label",
+            "placeholder": "Text for button"
+          }
+        }
+      },
+      "repeat": {}
+    }
+  }
+}
