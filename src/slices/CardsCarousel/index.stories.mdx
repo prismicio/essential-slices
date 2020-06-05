@@ -1,0 +1,22 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks'
+import CardsCarousel from '.'
+import { withA11y } from '@storybook/addon-a11y'
+import mock from './mock.json'
+
+<Meta title="slices/CardsCarousel" component={CardsCarousel} />
+
+# CardsCarousel
+
+You can use it as a cards carousel
+
+## Props
+
+<Props of={CardsCarousel} />
+
+### Default
+
+<Preview>
+  <Story name="Default" decorators={[withA11y]}>
+    <CardsCarousel slice={mock} />
+  </Story>
+</Preview>

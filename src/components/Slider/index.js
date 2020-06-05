@@ -110,7 +110,7 @@ Slider.defaultProps = {
 
 Slider.propTypes = {
   children: PropTypes.node.isRequired,
-  speed: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  speed: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
 export default Slider
