@@ -17,10 +17,10 @@ const CardsCarousel = ({ slice }) => {
           </Eyebrow>
           <RichText render={primary.title} />
         </Box>
-        <Desc>
+        <Desc mb="large">
           <RichText render={primary.description} />
         </Desc>
-        <Box __css={{ width: 'full', maxWidth: '100vw', mt: '4rem' }}>
+        <Box __css={{ width: 'full', maxWidth: '100vw' }}>
           <Slider
             infinite={false}
             speed="500"
@@ -62,7 +62,7 @@ const CardsCarousel = ({ slice }) => {
             ]}
           >
             {items.map((item) => (
-              <Box key={uuid()} px={[null, 'xsmall', 'small']}>
+              <Box key={uuid()} px={[null, 'small']}>
                 <Card key={item.toString()} {...item} />
               </Box>
             ))}
