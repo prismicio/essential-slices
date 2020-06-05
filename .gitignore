@@ -119,3 +119,6 @@ Terms
 .vercel
 .netlify
 storybook-static
+
+# Misc
+.DS_Store
