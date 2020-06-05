@@ -1,10 +1,10 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box } from 'theme-ui'
 import { RichText } from 'prismic-reactjs'
+import uuid from 'react-uuid'
 
-import { Eyebrow, Desc, Slider, Slice, Wrap } from '../../components'
+import { Card, Desc, Eyebrow, Slider, Slice, Wrap } from '../../components'
 
 const CardsCarousel = ({ slice }) => {
   const { primary, items } = slice
@@ -61,36 +61,11 @@ const CardsCarousel = ({ slice }) => {
               },
             ]}
           >
-            {items &&
-              items.map((item) => (
-                <div key={item.toString()}>
-                  <Box
-                    variant="secondary"
-                    __themeKey="background"
-                    __css={{
-                      borderRadius: 'card',
-                      px: '25px',
-                      py: '40px',
-                      textAlign: 'center',
-                      mx: '.7rem',
-                    }}
-                  >
-                    <Box
-                      as="img"
-                      __css={{ m: '0 auto', maxWidth: 'full' }}
-                      src={item.image.url}
-                      alt={item.image.alt}
-                      width={item.image.dimensions.width}
-                    />
-                    <div>
-                      <Box as="h3" __css={{ fontSize: 'base', mt: '2.5rem' }}>
-                        {RichText.asText(item.title)}
-                      </Box>
-                      <RichText render={item.content} />
-                    </div>
-                  </Box>
-                </div>
-              ))}
+            {items.map((item) => (
+              <Box key={uuid()} px={[null, 'xsmall', 'small']}>
+                <Card key={item.toString()} {...item} />
+              </Box>
+            ))}
           </Slider>
         </Box>
       </Wrap>
