@@ -4,17 +4,13 @@ import PropTypes from 'prop-types'
 import { Box } from 'theme-ui'
 import { RichText } from 'prismic-reactjs'
 
-import { Eyebrow, Desc, Slider } from '../../components'
+import { Eyebrow, Desc, Slider, Slice, Wrap } from '../../components'
 
 const CardsCarousel = ({ slice }) => {
   const { primary, items } = slice
   return (
-    <Box as="section" __themeKey="container" variant="inner">
-      <Box
-        variant="wrapper"
-        __themeKey="container"
-        __css={{ textAlign: ['left', null, 'center'] }}
-      >
+    <Slice>
+      <Wrap sx={{ textAlign: ['left', null, 'center'] }}>
         <Box as="header">
           <Eyebrow>
             <RichText render={primary.eyebrow_headline} />
@@ -97,8 +93,8 @@ const CardsCarousel = ({ slice }) => {
               ))}
           </Slider>
         </Box>
-      </Box>
-    </Box>
+      </Wrap>
+    </Slice>
   )
 }
 
