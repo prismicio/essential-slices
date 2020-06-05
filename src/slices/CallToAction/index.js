@@ -7,12 +7,11 @@ import { Button, Wrap, Desc, Slice } from '../../components'
 
 const CallToAction = ({
   slice: { primary },
-
   linkResolver, // linkResolver is pased by SliceZone
 }) => {
   const styles = {
     header: {
-      mb: ['hPadding2d', null, 'hPadding'],
+      mb: ['hPaddingHalf', null, 'hPadding'],
     },
     icon: {
       mb: 'cMargin',

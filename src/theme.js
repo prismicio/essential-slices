@@ -5,7 +5,7 @@ const breakpoints = [
 ]
 
 const baseColors = {
-  primary: '#1b836d',
+  primary: '#8592e0',
   primaryDark: '#16745f',
   primaryDarker: '#0d5e4c',
   secondary: '#f4f0ec',
@@ -26,6 +26,10 @@ const headings = {
         '2.75rem', // 44px
       ],
       lineHeight: 1.3,
+      mb: ['hPaddingHalf', null, 'hPadding'],
+    },
+    4: {
+      lineHeight: 1.2,
     },
   },
 }
@@ -55,10 +59,10 @@ export default {
       },
     },
     primary: {
-      bg: 'primary',
+      bg: 'primaryDark',
       color: 'white',
       '&:hover': {
-        backgroundColor: 'primaryDark',
+        backgroundColor: 'primaryDarker',
       },
     },
     secondary: {
@@ -69,18 +73,6 @@ export default {
       },
     },
     arrow: {
-      width: '2.75rem',
-      height: '2.75rem',
-      padding: '0.5rem',
-      borderRadius: '50%',
-      fontSize: 0,
-      lineHeight: 0,
-      position: 'absolute',
-      top: ['110%', null, null, '50%'],
-      display: 'block',
-      transform: 'translate(0, -50%)',
-      cursor: 'pointer',
-      outline: 'none',
       background: 'transparent',
       border: '2px dotted transparent',
       color: 'dark',
@@ -137,6 +129,7 @@ export default {
     normal: '500',
     heading: '600',
   },
+
   lineHeights: {
     heading: '1.25',
     button: '1.3',
@@ -151,13 +144,12 @@ export default {
     full: '100%',
   },
   space: {
-    hPadding2d: '1rem',
+    hPaddingHalf: '1rem',
     hPadding: '2rem',
     cPadding: '1.25rem',
 
     cMargin: '1rem',
 
-    vMargin2d: '1.25rem',
     vMargin: '2.5rem',
     vMargin2x: '5rem',
 
@@ -175,15 +167,13 @@ export default {
       p: 0,
     },
     'h1, h2, h3, h4': {
-      m: 0,
+      mt: 0,
     },
     h1: {
       ...headings.level[1],
     },
     p: {
       fontSize: 'body',
-      color: 'body',
-      mb: 4,
       mt: 0,
     },
     img: {
