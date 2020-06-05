@@ -37,6 +37,20 @@ const Icons = {
     />
   </g>
 </svg>`,
+  arrowDown: () => (
+    <svg
+      width="12"
+      height="8"
+      aria-hidden="true"
+      focusable="false"
+      viewBox="0 0 12 8"
+    >
+      <g fill="none">
+        <path fill="#000" d="M1.41.59l4.59 4.58 4.59-4.58 1.41 1.41-6 6-6-6z" />
+        <path d="M-6-8h24v24h-24z" />
+      </g>
+    </svg>
+  ),
 }
 
 const Icon = React.forwardRef(({ icon, variant }, ref) => {
