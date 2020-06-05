@@ -19,7 +19,7 @@ const Accordion = ({ slice }) => {
               setActive(active === i ? null : i)
             }}
             sx={{
-              mb: '0',
+              mb: 'small',
             }}
           />
         )
