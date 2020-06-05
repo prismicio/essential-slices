@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, Richtext } from 'prismic-reactjs'
+import { Link, RichText } from 'prismic-reactjs'
 import { Box } from 'theme-ui'
 
 function Button({ link, label, linkResolver, ...props }) {
@@ -34,7 +34,7 @@ function Button({ link, label, linkResolver, ...props }) {
       __css={buttonStyles}
       {...linkProps}
     >
-      {typeof label === 'string' ? label : <Richtext render={label} />}
+      {typeof label === 'string' ? label : <RichText render={label} />}
     </Box>
   )
 }
