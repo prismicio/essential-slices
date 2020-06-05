@@ -28,7 +28,9 @@ const Card = ({ image, title, content, ...props }) => {
         <Box as="h3" __css={{ fontSize: 'base', mb: 'small' }}>
           {RichText.asText(title)}
         </Box>
-        <RichText render={content} />
+        <Box sx={{ fontWeight: 'lean' }}>
+          <RichText render={content} />
+        </Box>
       </div>
     </Box>
   )
