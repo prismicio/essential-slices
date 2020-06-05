@@ -26,6 +26,10 @@ const headings = {
         '2.75rem', // 44px
       ],
       lineHeight: 1.3,
+      mb: ['hPaddingHalf', null, 'hPadding'],
+    },
+    4: {
+      lineHeight: 1.2,
     },
   },
 }
@@ -125,6 +129,7 @@ export default {
     normal: '500',
     heading: '600',
   },
+
   lineHeights: {
     heading: '1.25',
     button: '1.3',
@@ -139,13 +144,12 @@ export default {
     full: '100%',
   },
   space: {
-    hPadding2d: '1rem',
+    hPaddingHalf: '1rem',
     hPadding: '2rem',
     cPadding: '1.25rem',
 
     cMargin: '1rem',
 
-    vMargin2d: '1.25rem',
     vMargin: '2.5rem',
     vMargin2x: '5rem',
 
