@@ -5,7 +5,7 @@ const breakpoints = [
 ]
 
 const baseColors = {
-  primary: '#1b836d',
+  primary: '#8592e0',
   primaryDark: '#16745f',
   primaryDarker: '#0d5e4c',
   secondary: '#f4f0ec',
@@ -55,10 +55,10 @@ export default {
       },
     },
     primary: {
-      bg: 'primary',
+      bg: 'primaryDark',
       color: 'white',
       '&:hover': {
-        backgroundColor: 'primaryDark',
+        backgroundColor: 'primaryDarker',
       },
     },
     secondary: {
