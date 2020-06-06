@@ -3,9 +3,8 @@ import PropTypes from 'prop-types'
 import { Box } from 'theme-ui'
 import AccordionItem from './AccordionItem'
 
-const Accordion = ({ slice }) => {
+const Accordion = ({ items }) => {
   const [active, setActive] = useState()
-  const { items } = slice
 
   return (
     <Box>
@@ -29,9 +28,7 @@ const Accordion = ({ slice }) => {
 }
 
 Accordion.propTypes = {
-  slice: PropTypes.shape({
-    items: PropTypes.arrayOf(PropTypes.shape({})),
-  }).isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 }
 
 export default Accordion
