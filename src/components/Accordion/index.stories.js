@@ -8,5 +8,5 @@ export default {
 }
 
 export const Default = () => {
-  return <Accordion slice={mock} />
+  return <Accordion items={mock.items} />
 }
