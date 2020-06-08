@@ -4,6 +4,7 @@ import { RichText } from 'prismic-reactjs'
 import { Box } from 'theme-ui'
 import { Desc, Eyebrow, Grid, Head, Slice, Wrap } from '../../components'
 import Accordion from '../../components/Accordion'
+import { structuredTextPropTypes } from '../../utils/prop-types'
 
 const FaqSection = ({ slice }) => {
   const { items, primary } = slice
@@ -43,20 +44,8 @@ const FaqSection = ({ slice }) => {
 FaqSection.propTypes = {
   slice: PropTypes.shape({
     primary: PropTypes.shape({
-      title: PropTypes.arrayOf(
-        PropTypes.shape({
-          type: PropTypes.string,
-          text: PropTypes.string,
-          spans: PropTypes.arrayOf(PropTypes.shape({})),
-        })
-      ),
-      description: PropTypes.arrayOf(
-        PropTypes.shape({
-          type: PropTypes.string,
-          text: PropTypes.string,
-          spans: PropTypes.arrayOf(PropTypes.shape({})),
-        })
-      ),
+      title: structuredTextPropTypes,
+      description: structuredTextPropTypes,
       eyebrow_headline: PropTypes.array,
       call_to_action: PropTypes.array,
       call_to_action_link: PropTypes.shape({
