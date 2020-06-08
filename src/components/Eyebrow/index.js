@@ -5,7 +5,8 @@ import { Box } from 'theme-ui'
 const Eyebrow = ({ children }) => {
   return (
     <Box
-      color="primary"
+      __themeKey="container"
+      variant="eyebrow"
       __css={{
         fontSize: 'kicker',
         lineHeight: 'button',
