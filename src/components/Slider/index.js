@@ -91,12 +91,36 @@ const PrevArrow = (props) => {
   )
 }
 
-const Slider = ({ children, speed, ...props }) => {
+const AppendDots = (dots) => {
+  const dotsStyles = {
+    'button::before': {
+      bg: 'dark',
+    },
+
+    'button:focus': {
+      borderColor: 'primaryDark',
+    },
+
+    '.slick-active button::before': {
+      bg: 'primaryDark',
+    },
+  }
+
+  return (
+    <Box __css={dotsStyles} __themeKey="slider.dots">
+      <ul>{dots}</ul>
+    </Box>
+  )
+}
+
+const Slider = ({ children, speed, draggable, ...props }) => {
   return (
     <SlickSlider
-      speed={speed}
+      appendDots={AppendDots}
+      draggable={draggable}
       nextArrow={<NextArrow />}
       prevArrow={<PrevArrow />}
+      speed={speed}
       {...props}
     >
       {children}
@@ -106,10 +130,12 @@ const Slider = ({ children, speed, ...props }) => {
 
 Slider.defaultProps = {
   speed: 500,
+  draggable: false,
 }
 
 Slider.propTypes = {
   children: PropTypes.node.isRequired,
+  draggable: PropTypes.bool,
   speed: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
