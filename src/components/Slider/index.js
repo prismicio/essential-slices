@@ -1,9 +1,10 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box } from 'theme-ui'
 import SlickSlider from 'react-slick'
+
 import './slick.css'
+import DotsWithLabel from './DotsWithLabel'
 
 const arrowStyles = {
   cursor: 'pointer',
@@ -27,9 +28,9 @@ const NextArrow = (props) => {
     <Box
       as="button"
       type="button"
-      __themeKey="buttons"
       variant="arrow"
       onClick={onClick}
+      __themeKey="slider"
       __css={{
         right: ['35%', null, null, '-52px'],
         ...arrowStyles,
@@ -56,15 +57,19 @@ const NextArrow = (props) => {
   )
 }
 
+NextArrow.propTypes = {
+  onClick: PropTypes.func.isRequired,
+}
+
 const PrevArrow = (props) => {
   const { onClick } = props
   return (
     <Box
       as="button"
       type="button"
-      __themeKey="buttons"
       variant="arrow"
       onClick={onClick}
+      __themeKey="slider"
       __css={{
         left: ['35%', null, null, '-52px'],
         ...arrowStyles,
@@ -91,12 +96,43 @@ const PrevArrow = (props) => {
   )
 }
 
-const Slider = ({ children, speed, ...props }) => {
+PrevArrow.propTypes = {
+  onClick: PropTypes.func.isRequired,
+}
+
+const AppendDots = (dots) => {
+  const dotsStyles = {
+    'button::before': {
+      bg: 'dark',
+    },
+
+    'button:focus': {
+      borderColor: 'primaryDark',
+    },
+
+    '.slick-active button::before': {
+      bg: 'primaryDark',
+    },
+  }
+
+  return (
+    <Box __css={dotsStyles} __themeKey="slider.appendDots">
+      <ul>{dots}</ul>
+    </Box>
+  )
+}
+
+const Slider = ({ children, speed, draggable, dotsWithLabel, ...props }) => {
+  const customPagingProp = dotsWithLabel ? { customPaging: DotsWithLabel } : {}
+
   return (
     <SlickSlider
-      speed={speed}
+      appendDots={AppendDots}
+      draggable={draggable}
       nextArrow={<NextArrow />}
       prevArrow={<PrevArrow />}
+      speed={speed}
+      {...customPagingProp}
       {...props}
     >
       {children}
@@ -106,10 +142,14 @@ const Slider = ({ children, speed, ...props }) => {
 
 Slider.defaultProps = {
   speed: 500,
+  dotsWithLabel: false,
+  draggable: false,
 }
 
 Slider.propTypes = {
   children: PropTypes.node.isRequired,
+  dotsWithLabel: PropTypes.bool,
+  draggable: PropTypes.bool,
   speed: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 
