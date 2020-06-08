@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { RichText } from 'prismic-reactjs'
+import uuid from 'react-uuid'
 import { Box } from 'theme-ui'
 
 import { Desc, Eyebrow, Slice, Slider, Wrap } from '../../components'
@@ -24,48 +25,57 @@ const ImagesSlider = ({ slice }) => {
       <Wrap>
         <Box mb="large">
           <Box as="header">
-            <Eyebrow>
-              <RichText render={primary.eyebrow_headline} />
-            </Eyebrow>
+            {primary.eyebrow_headline && (
+              <Eyebrow>
+                <RichText render={primary.eyebrow_headline} />
+              </Eyebrow>
+            )}
             <RichText render={primary.title} />
           </Box>
-          <Desc>
-            <RichText render={primary.description} />
-          </Desc>
+
+          {primary.description && (
+            <Desc>
+              <RichText render={primary.description} />
+            </Desc>
+          )}
         </Box>
 
-        <Box __css={{ width: 'full', maxWidth: '100vw' }}>
+        <Box
+          __css={{
+            width: 'full',
+            maxWidth: '100vw',
+          }}
+        >
           <Slider {...settings}>
-            {items.map((item) => {
-              return (
-                <Box>
+            {items.map((item) => (
+              <Box key={uuid()}>
+                <Box
+                  as="figure"
+                  __css={{
+                    img: {
+                      maxWidth: '840px',
+                      width: 'full',
+                    },
+                  }}
+                >
                   <Box
-                    as="figure"
-                    __css={{
-                      img: {
-                        maxWidth: '840px',
-                        width: 'full',
-                        outline: 'none',
-                      },
-                    }}
-                  >
-                    <Box
-                      as="img"
-                      src={item.image.url}
-                      alt={item.image.alt}
-                      width={item.image.dimensions.width}
-                      mx="auto"
-                      mb="medium"
-                    />
+                    as="img"
+                    src={item.image.url}
+                    alt={item.image.alt}
+                    width={item.image.dimensions.width}
+                    mx="auto"
+                    mb="medium"
+                  />
+                  {item.description && (
                     <Desc>
                       <fig-caption>
                         <RichText render={item.description} />
                       </fig-caption>
                     </Desc>
-                  </Box>
+                  )}
                 </Box>
-              )
-            })}
+              </Box>
+            ))}
           </Slider>
         </Box>
       </Wrap>
