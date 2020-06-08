@@ -34,7 +34,7 @@ const ImagesSlider = ({ slice }) => {
           </Box>
 
           {primary.description && (
-            <Desc>
+            <Desc mx={[null, 'auto']}>
               <RichText render={primary.description} />
             </Desc>
           )}
@@ -67,7 +67,7 @@ const ImagesSlider = ({ slice }) => {
                     mb="medium"
                   />
                   {item.description && (
-                    <Desc>
+                    <Desc mx={[null, 'auto']}>
                       <fig-caption>
                         <RichText render={item.description} />
                       </fig-caption>
