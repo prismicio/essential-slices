@@ -1,4 +1,6 @@
 import React from 'react'
+import { ThemeProvider } from 'theme-ui'
+import theme from '../../theme'
 import FaqSection from '.'
 
 const mock = {
@@ -185,4 +187,24 @@ export const Default = () => {
 
 export const WithoutImage = () => {
   return <FaqSection slice={noImageMock} />
+}
+
+export const WithCustomTheme = () => {
+  const customTheme = {
+    ...theme,
+    container: {
+      ...theme.container,
+      wrapper: {
+        transform: 'rotateZ(2deg)',
+      },
+      eyebrow: {
+        color: 'tomato',
+      },
+    },
+  }
+  return (
+    <ThemeProvider theme={customTheme}>
+      <FaqSection slice={noImageMock} />
+    </ThemeProvider>
+  )
 }
