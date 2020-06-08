@@ -72,6 +72,8 @@ export default {
         backgroundColor: 'grey20',
       },
     },
+  },
+  slider: {
     arrow: {
       background: 'transparent',
       border: '2px dotted transparent',
