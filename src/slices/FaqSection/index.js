@@ -17,7 +17,11 @@ const FaqSection = ({ slice }) => {
                 <RichText render={primary.eyebrow_headline} />
               </Eyebrow>
             )}
-            <RichText render={primary.title} />
+            {primary.title && (
+              <Box _themeKey="container" variant="title">
+                <RichText render={primary.title} />
+              </Box>
+            )}
             {primary.description && (
               <Desc mb="large">
                 <RichText render={primary.description} />

@@ -26,6 +26,8 @@ const Grid = React.forwardRef(
     return (
       <Box
         ref={ref}
+        __themeKey="container"
+        variant="grid"
         {...props}
         __css={{
           display: 'grid',
