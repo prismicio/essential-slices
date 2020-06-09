@@ -67,11 +67,7 @@ FaqSection.propTypes = {
     primary: PropTypes.shape({
       title: structuredTextPropTypes,
       description: structuredTextPropTypes,
-      eyebrow_headline: PropTypes.array,
-      call_to_action: PropTypes.array,
-      call_to_action_link: PropTypes.shape({
-        url: PropTypes.string,
-      }),
+      eyebrow_headline: structuredTextPropTypes,
       optional_image: PropTypes.shape({
         url: PropTypes.string,
       }),
