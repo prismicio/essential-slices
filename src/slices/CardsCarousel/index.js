@@ -67,7 +67,17 @@ const CardsCarousel = ({ slice }) => {
           >
             {items.map((item) => (
               <Box key={uuid()} px={[null, 'small']}>
-                <Card key={item.toString()} {...item} />
+                <Card key={item.toString()}>
+                  <Card.Image image={item.image} />
+                  <Card.Content>
+                    <Box as="h3" __css={{ fontSize: 'base', mb: 'small' }}>
+                      {RichText.asText(item.title)}
+                    </Box>
+                    <Box sx={{ fontWeight: 'lean' }}>
+                      <RichText render={item.content} />
+                    </Box>
+                  </Card.Content>
+                </Card>
               </Box>
             ))}
           </Slider>
