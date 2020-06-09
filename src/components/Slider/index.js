@@ -122,8 +122,17 @@ const AppendDots = (dots) => {
   )
 }
 
-const Slider = ({ children, speed, draggable, dotsWithLabel, ...props }) => {
-  const customPagingProp = dotsWithLabel ? { customPaging: DotsWithLabel } : {}
+const Slider = ({
+  children,
+  speed,
+  draggable,
+  dotsWithLabel,
+  dotsLabel,
+  ...props
+}) => {
+  const customPagingProp = dotsWithLabel
+    ? { customPaging: (i) => DotsWithLabel(i, dotsLabel) }
+    : {}
 
   return (
     <SlickSlider
@@ -144,6 +153,7 @@ Slider.defaultProps = {
   speed: 500,
   dotsWithLabel: false,
   draggable: false,
+  dotsLabel: 'Slide',
 }
 
 Slider.propTypes = {
@@ -151,6 +161,7 @@ Slider.propTypes = {
   dotsWithLabel: PropTypes.bool,
   draggable: PropTypes.bool,
   speed: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  dotsLabel: PropTypes.string,
 }
 
 export default Slider

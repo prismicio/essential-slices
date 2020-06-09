@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from 'theme-ui'
 
-const DotsWithLabel = (index) => {
+const DotsWithLabel = (index, dotsLabel) => {
   const dotStyles = {
     span: {
       opacity: 0,
@@ -47,7 +47,7 @@ const DotsWithLabel = (index) => {
       __css={dotStyles}
       __themeKey="slider.dots"
     >
-      <Box as="span" __css={dotLabelStyles}>{`Slide ${index + 1}`}</Box>
+      <Box as="span" __css={dotLabelStyles}>{`${dotsLabel} ${index + 1}`}</Box>
     </Box>
   )
 }
