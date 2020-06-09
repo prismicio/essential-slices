@@ -4,6 +4,7 @@ import { Box } from 'theme-ui'
 import { RichText } from 'prismic-reactjs'
 import uuid from 'react-uuid'
 
+import { structuredTextPropTypes } from '../../utils/prop-types'
 import { Card, Desc, Eyebrow, Slider, Slice, Wrap } from '../../components'
 
 const TestimonialsSlider = ({ slice }) => {
@@ -12,6 +13,7 @@ const TestimonialsSlider = ({ slice }) => {
   const settings = {
     dots: true,
     dotsWithLabel: true,
+    dotsLabel: 'Testimonial',
     arrows: true,
     draggable: false,
     infinite: false,
@@ -87,9 +89,9 @@ const TestimonialsSlider = ({ slice }) => {
 TestimonialsSlider.propTypes = {
   slice: PropTypes.shape({
     primary: PropTypes.shape({
-      eyebrow_headline: PropTypes.array,
-      title: PropTypes.array,
-      description: PropTypes.array,
+      eyebrow_headline: structuredTextPropTypes,
+      title: structuredTextPropTypes,
+      description: structuredTextPropTypes,
     }).isRequired,
     items: PropTypes.array.isRequired,
   }).isRequired,

@@ -1,4 +1,4 @@
-# Pricing Table Section
+# Testimonials Slider Section
 
 ### Purpose of the component
 
