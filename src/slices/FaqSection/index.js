@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { RichText } from 'prismic-reactjs'
 import { Box } from 'theme-ui'
-import { Desc, Eyebrow, Grid, Head, Slice, Wrap } from '../../components'
+import { Desc, Eyebrow, Grid, Head, Title, Slice, Wrap } from '../../components'
 import Accordion from '../../components/Accordion'
 import { structuredTextPropTypes } from '../../utils/prop-types'
 
@@ -19,9 +19,9 @@ const FaqSection = ({ slice }) => {
               </Eyebrow>
             )}
             {primary.title && (
-              <Box _themeKey="container" variant="title">
+              <Title>
                 <RichText render={primary.title} />
-              </Box>
+              </Title>
             )}
             {primary.description && (
               <Desc mb="large">
