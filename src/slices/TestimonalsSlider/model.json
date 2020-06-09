@@ -1,0 +1,75 @@
+{
+  "type": "Slice",
+  "fieldset": "Testimonials Slider",
+  "description": "A predesigned Slider with rich testimonial",
+  "icon": "notifications_active",
+  "display": "list",
+  "non-repeat": {
+    "eyebrow_headline": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "allowTargetBlank": true,
+        "label": "Eyebrow headline"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label": "Title"
+      }
+    },
+    "paragraph": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label": "Paragraph"
+      }
+    },
+    "button_link": {
+      "type": "Link",
+      "config": {
+        "label": "Button Link"
+      }
+    },
+    "button_label": {
+      "type": "Text",
+      "config": {
+        "label": "Button Label",
+        "placeholder": "Text for button"
+      }
+    }
+  },
+  "repeat": {
+    "image": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "image"
+      }
+    },
+    "testimonial": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label": "testimonial"
+      }
+    },
+    "person": {
+      "type": "Text",
+      "config": {
+        "label": "person",
+        "placeholder": "Their full name"
+      }
+    },
+    "title": {
+      "type": "Text",
+      "config": {
+        "label": "title",
+        "placeholder": "Their title"
+      }
+    }
+  }
+}

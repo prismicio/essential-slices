@@ -1,0 +1,62 @@
+{
+  "type": "Slice",
+  "fieldset": "Feature Grid component",
+  "description": "A predesigned Grid of argument",
+  "icon": "filter_list",
+  "display": "list",
+  "non-repeat": {
+    "eyebrow_headline": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "allowTargetBlank": true,
+        "label": "Eyebrow headline"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label": "title"
+      }
+    }
+  },
+  "repeat": {
+    "optional_icon": {
+      "type": "Image",
+      "config": {
+        "constraint": {},
+        "thumbnails": [],
+        "label": "Optional Icon"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading3",
+        "label": "title"
+      }
+    },
+    "description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "allowTargetBlank": true,
+        "label": "description"
+      }
+    },
+    "optional_link": {
+      "type": "Link",
+      "config": {
+        "label": "Optional Link"
+      }
+    },
+    "button_label": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Button label"
+      }
+    }
+  }
+}
