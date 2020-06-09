@@ -1,34 +1,25 @@
-import React, { useState } from 'react'
+import React, { Children, cloneElement, useState } from 'react'
 import PropTypes from 'prop-types'
 import { Box } from 'theme-ui'
-import AccordionItem from './AccordionItem'
 
-const Accordion = ({ items }) => {
+const Accordion = ({ children }) => {
   const [active, setActive] = useState()
 
-  return (
-    <Box>
-      {items.map(({ text, title }, i) => {
-        return (
-          <AccordionItem
-            active={active === i}
-            title={title}
-            text={text}
-            onClick={() => {
-              setActive(active === i ? null : i)
-            }}
-            sx={{
-              mb: 'small',
-            }}
-          />
-        )
-      })}
-    </Box>
-  )
+  const items = Children.map(children, (item, index) => {
+    if (!item) return undefined
+
+    const isActive = index === active
+
+    return cloneElement(item, {
+      active: isActive,
+      onClick: () => setActive(index === active ? null : index),
+    })
+  })
+  return <Box>{items}</Box>
 }
 
 Accordion.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 export default Accordion

@@ -8,5 +8,19 @@ export default {
 }
 
 export const Default = () => {
-  return <Accordion items={mock.items} />
+  return (
+    <Accordion>
+      {mock.items.map(({ text, title }) => {
+        return (
+          <Accordion.Item
+            title={title}
+            text={text}
+            sx={{
+              mb: 'small',
+            }}
+          />
+        )
+      })}
+    </Accordion>
+  )
 }
