@@ -4,11 +4,7 @@ import { Box } from 'theme-ui'
 
 const Title = ({ children, ...props }) => {
   return (
-    <Box
-      __themeKey="container"
-      variant="title"
-      {...props}
-    >
+    <Box __themeKey="container" variant="title" {...props}>
       {children}
     </Box>
   )

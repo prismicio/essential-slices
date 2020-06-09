@@ -2,12 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { RichText } from 'prismic-reactjs'
 import { Box } from 'theme-ui'
-import { Desc, Eyebrow, Grid, Head, Title, Slice, Wrap } from '../../components'
-import Accordion from '../../components/Accordion'
+import {
+  Accordion,
+  Desc,
+  Eyebrow,
+  Grid,
+  Head,
+  Title,
+  Slice,
+  Wrap,
+} from '../../components'
 import { structuredTextPropTypes } from '../../utils/prop-types'
 
 const FaqSection = ({ slice }) => {
   const { items, primary } = slice
+
   return (
     <Slice sx={{ textAlign: 'center' }}>
       <Wrap>
@@ -33,7 +42,19 @@ const FaqSection = ({ slice }) => {
             {primary.optional_image && (
               <Box as="img" src={primary.optional_image.url} />
             )}
-            <Accordion items={items} />
+            <Accordion>
+              {items.map(({ text, title }) => {
+                return (
+                  <Accordion.Item
+                    title={title}
+                    text={text}
+                    sx={{
+                      mb: 'small',
+                    }}
+                  />
+                )
+              })}
+            </Accordion>
           </Grid>
         </Head>
       </Wrap>
