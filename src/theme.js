@@ -111,6 +111,9 @@ export default {
       maxWidth: ['90%', null, null, '75%'],
       m: '0 auto',
     },
+    eyebrow: {
+      color: 'primary',
+    },
   },
   fonts: {
     body:
@@ -177,7 +180,6 @@ export default {
       color: 'dark',
     },
   },
-
   styles: {
     root: {
       color: 'text',
