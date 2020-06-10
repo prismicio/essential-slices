@@ -107,6 +107,9 @@ export default {
       py: '8vw',
       px: '2rem',
     },
+    grid: {
+      width: '100%',
+    },
     wrapper: {
       maxWidth: ['90%', null, null, '75%'],
       m: '0 auto',
