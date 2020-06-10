@@ -114,6 +114,21 @@ export default {
     eyebrow: {
       color: 'primary',
     },
+    description: {
+      mr: 'auto',
+      ml: 'auto',
+      mb: 'hPadding',
+      maxWidth: '38rem',
+      fontSize: ['kicker', null, null, 'lg'],
+      fontWeight: 'lean',
+      p: {
+        lineHeight: 'desc',
+        display: 'inline-block',
+      },
+      'p:last-of-type': {
+        mb: '0',
+      },
+    },
   },
   fonts: {
     body:
@@ -237,6 +252,7 @@ export default {
     p: {
       fontSize: 'body',
       mt: 0,
+      mb: 0,
     },
     img: {
       maxWidth: '100%',

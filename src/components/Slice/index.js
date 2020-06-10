@@ -6,6 +6,8 @@ const Slice = ({ children, ...props }) => {
   return (
     <Box
       as="section"
+      __themeKey="container"
+      variant="slice"
       __css={{
         width: '100vw',
         position: 'relative',

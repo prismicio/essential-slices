@@ -4,22 +4,7 @@ import { Box } from 'theme-ui'
 
 const Desc = ({ children, ...props }) => {
   return (
-    <Box
-      __css={{
-        mx: [null, null, 'auto'],
-        mb: 'hPadding',
-        maxWidth: '38rem',
-        fontSize: ['kicker', null, null, 'lg'],
-        fontWeight: 'lean',
-        p: {
-          lineHeight: 'desc',
-        },
-        'p:last-of-type': {
-          mb: '0',
-        },
-      }}
-      {...props}
-    >
+    <Box __themeKey="container" variant="description" {...props}>
       {children}
     </Box>
   )
