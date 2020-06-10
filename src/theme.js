@@ -171,6 +171,43 @@ export default {
     xxlarge: '16rem', // 256px
     xxxlarge: '32rem', // 512px
   },
+  tabs: {
+    default: {
+      header: {},
+      content: {},
+      item: {
+        '&::after': {
+          height: 2,
+          left: 0,
+        },
+      },
+    },
+    vertical: {
+      display: [null, 'flex'],
+      label: {
+        pt: ['xsmall', null, null],
+        display: 'block',
+        ':focus': {
+          outline: '3px solid currentColor',
+          zIndex: '1',
+        },
+      },
+      content: {
+        width: '100%',
+      },
+      item: {
+        width: '100%',
+        mx: 0,
+        pr: 'medium',
+        borderTop: '1px solid',
+        borderColor: 'grey90',
+        ':last-of-type:not(.active)': {
+          borderBottom: '1px solid',
+          borderColor: 'grey90',
+        },
+      },
+    },
+  },
 
   // Default Components
 
