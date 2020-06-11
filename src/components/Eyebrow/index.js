@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Box } from 'theme-ui'
 
-const Eyebrow = ({ children }) => {
+const Eyebrow = ({ children, ...props }) => {
   return (
     <Box
       __themeKey="container"
@@ -13,6 +13,7 @@ const Eyebrow = ({ children }) => {
         mb: '.65rem',
         fontWeight: 'normal',
       }}
+      {...props}
     >
       {children}
     </Box>
