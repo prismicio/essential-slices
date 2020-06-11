@@ -191,8 +191,6 @@ export default {
   },
   tabs: {
     default: {
-      header: {},
-      content: {},
       item: {
         '&::after': {
           height: 2,
@@ -203,7 +201,7 @@ export default {
     vertical: {
       display: [null, 'flex'],
       label: {
-        pt: ['xsmall', null, null],
+        pt: ['small', 0],
         display: 'block',
         ':focus': {
           outline: '3px solid currentColor',
