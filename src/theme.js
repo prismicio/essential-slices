@@ -72,6 +72,15 @@ export default {
         backgroundColor: 'grey20',
       },
     },
+    light: {
+      bg: 'white',
+      color: 'grey0',
+      border: '1px solid',
+      borderColor: 'grey0',
+      '&:hover': {
+        backgroundColor: 'grey90',
+      },
+    },
   },
   slider: {
     arrow: {
@@ -114,6 +123,7 @@ export default {
     eyebrow: {
       color: 'primary',
     },
+    grid: {},
   },
   fonts: {
     body:
