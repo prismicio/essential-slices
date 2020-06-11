@@ -116,6 +116,9 @@ export default {
       py: '8vw',
       px: '2rem',
     },
+    grid: {
+      width: '100%',
+    },
     wrapper: {
       maxWidth: ['90%', null, null, '75%'],
       m: '0 auto',
@@ -123,7 +126,21 @@ export default {
     eyebrow: {
       color: 'primary',
     },
-    grid: {},
+    description: {
+      mr: 'auto',
+      ml: 'auto',
+      mb: 'hPadding',
+      maxWidth: '38rem',
+      fontSize: ['kicker', null, null, 'lg'],
+      fontWeight: 'lean',
+      p: {
+        lineHeight: 'desc',
+        display: 'inline-block',
+      },
+      'p:last-of-type': {
+        mb: '0',
+      },
+    },
   },
   fonts: {
     body:
@@ -181,6 +198,41 @@ export default {
     xxlarge: '16rem', // 256px
     xxxlarge: '32rem', // 512px
   },
+  tabs: {
+    default: {
+      item: {
+        '&::after': {
+          height: 2,
+          left: 0,
+        },
+      },
+    },
+    vertical: {
+      display: [null, 'flex'],
+      label: {
+        pt: ['small', 0],
+        display: 'block',
+        ':focus': {
+          outline: '3px solid currentColor',
+          zIndex: '1',
+        },
+      },
+      content: {
+        width: '100%',
+      },
+      item: {
+        width: '100%',
+        mx: 0,
+        pr: 'medium',
+        borderTop: '1px solid',
+        borderColor: 'grey90',
+        ':last-of-type:not(.active)': {
+          borderBottom: '1px solid',
+          borderColor: 'grey90',
+        },
+      },
+    },
+  },
 
   // Default Components
 
@@ -210,6 +262,7 @@ export default {
     p: {
       fontSize: 'body',
       mt: 0,
+      mb: 0,
     },
     img: {
       maxWidth: '100%',
