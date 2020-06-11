@@ -5,6 +5,7 @@ import SlickSlider from 'react-slick'
 
 import './slick.css'
 import DotsWithLabel from './DotsWithLabel'
+import Icon from '../Icon'
 
 const arrowStyles = {
   cursor: 'pointer',
@@ -37,22 +38,7 @@ const NextArrow = (props) => {
       }}
       aria-label="Next"
     >
-      <svg
-        width="8"
-        height="12"
-        viewBox="0 0 8 12"
-        aria-hidden="true"
-        focusable="false"
-      >
-        <g fill="none" fillRule="evenodd">
-          <path d="M-8-6h24v24H-8z" />
-          <path
-            fill="currentColor"
-            fillRule="nonzero"
-            d="M.59 10.59L5.17 6 .59 1.41 2 0l6 6-6 6z"
-          />
-        </g>
-      </svg>
+      <Icon icon="arrowRight" />
     </Box>
   )
 }
@@ -76,22 +62,7 @@ const PrevArrow = (props) => {
       }}
       aria-label="Previous"
     >
-      <svg
-        width="8"
-        height="12"
-        viewBox="0 0 8 12"
-        aria-hidden="true"
-        focusable="false"
-      >
-        <g fill="none" fillRule="evenodd">
-          <path d="M-8-6h24v24H-8z" />
-          <path
-            fill="currentColor"
-            fillRule="nonzero"
-            d="M7.41 10.59L2.83 6l4.58-4.59L6 0 0 6l6 6z"
-          />
-        </g>
-      </svg>
+      <Icon icon="arrowLeft" />
     </Box>
   )
 }

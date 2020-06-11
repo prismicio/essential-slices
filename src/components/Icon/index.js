@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Box } from 'theme-ui'
 
 const Icons = {
-  featureIcon: `
+  feature: `
 <svg
     aria-hidden="true"
     focusable="false"
@@ -20,7 +20,7 @@ const Icons = {
         />
     </g>
 </svg>`,
-  notIncludedIcon: `
+  notIncluded: `
 <svg
   aria-hidden="true"
   focusable="false"
@@ -37,13 +37,14 @@ const Icons = {
     />
   </g>
 </svg>`,
-  arrowDown: () => (
+  arrowDown: (props) => (
     <svg
       width="12"
       height="8"
       aria-hidden="true"
       focusable="false"
       viewBox="0 0 12 8"
+      {...props}
     >
       <g fill="none">
         <path fill="#000" d="M1.41.59l4.59 4.58 4.59-4.58 1.41 1.41-6 6-6-6z" />
@@ -51,10 +52,56 @@ const Icons = {
       </g>
     </svg>
   ),
+  arrowRight: (props) => (
+    <svg
+      width="8"
+      height="12"
+      viewBox="0 0 8 12"
+      aria-hidden="true"
+      focusable="false"
+      {...props}
+    >
+      <g fill="none" fillRule="evenodd">
+        <path d="M-8-6h24v24H-8z" />
+        <path
+          fill="currentColor"
+          fillRule="nonzero"
+          d="M.59 10.59L5.17 6 .59 1.41 2 0l6 6-6 6z"
+        />
+      </g>
+    </svg>
+  ),
+  arrowLeft: (props) => (
+    <svg
+      width="8"
+      height="12"
+      viewBox="0 0 8 12"
+      aria-hidden="true"
+      focusable="false"
+      {...props}
+    >
+      <g fill="none" fillRule="evenodd">
+        <path d="M-8-6h24v24H-8z" />
+        <path
+          fill="currentColor"
+          fillRule="nonzero"
+          d="M7.41 10.59L2.83 6l4.58-4.59L6 0 0 6l6 6z"
+        />
+      </g>
+    </svg>
+  ),
 }
 
-const Icon = React.forwardRef(({ icon, variant }, ref) => {
-  return <Box ref={ref} as={Icons[icon]} variant={variant} __themeKey="icons" />
+const Icon = React.forwardRef(({ icon, variant, ...props }, ref) => {
+  return (
+    <Box
+      ref={ref}
+      as={Icons[icon]}
+      {...props}
+      variant={variant}
+      __themeKey="icons"
+    />
+  )
 })
 
 Icon.encode = (name) => `data:image/svg+xml; utf8, ${Icons[name]}`
