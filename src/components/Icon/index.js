@@ -92,11 +92,11 @@ const Icons = {
   ),
 }
 
-const Icon = React.forwardRef(({ icon, variant, ...props }, ref) => {
+const Icon = React.forwardRef(({ name, variant, ...props }, ref) => {
   return (
     <Box
       ref={ref}
-      as={Icons[icon]}
+      as={Icons[name]}
       {...props}
       variant={variant}
       __themeKey="icons"
@@ -107,7 +107,7 @@ const Icon = React.forwardRef(({ icon, variant, ...props }, ref) => {
 Icon.encode = (name) => `data:image/svg+xml; utf8, ${Icons[name]}`
 
 Icon.propTypes = {
-  icon: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   variant: PropTypes.string,
 }
 

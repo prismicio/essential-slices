@@ -1,33 +1,54 @@
 {
-  "image": {
-    "dimensions": {
-      "width": 2048,
-      "height": 1536
+  "cardsCarousel": {
+    "image": {
+      "dimensions": {
+        "width": 2048,
+        "height": 1536
+      },
+      "alt": "Title 1",
+      "copyright": null,
+      "url": "https://images.prismic.io/slicesexamples/b4aeb1e2-e9c1-43ab-82ab-0d0519f9c3cd_float.png?auto=compress,format"
     },
-    "alt": "Title 1",
-    "copyright": null,
-    "url": "https://images.prismic.io/slicesexamples/b4aeb1e2-e9c1-43ab-82ab-0d0519f9c3cd_float.png?auto=compress,format"
+    "title": [
+      {
+        "type": "heading3",
+        "text": "Title 1",
+        "spans": []
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Content hello",
+        "spans": []
+      }
+    ],
+    "additional_info": [
+      {
+        "type": "paragraph",
+        "text": "",
+        "spans": []
+      }
+    ]
   },
-  "title": [
-    {
-      "type": "heading3",
-      "text": "Title 1",
-      "spans": []
-    }
-  ],
-  "content": [
-    {
-      "type": "paragraph",
-      "text": "Content hello",
-      "spans": []
-    }
-  ],
-  "additional_info": [
-    {
-      "type": "paragraph",
-      "text": "",
-      "spans": []
-    }
-  ],
-  "footer": "Footer"
+  "testimonialsSlider": {
+    "image": {
+      "dimensions": {
+        "width": 400,
+        "height": 400
+      },
+      "alt": "Image 1",
+      "copyright": null,
+      "url": "https://images.prismic.io/slicesexamples/342cc816-3eeb-403c-a63b-79a678921258_OTg3ODQuanBn.jpg?auto=compress,format&rect=0,0,512,512&w=400&h=400"
+    },
+    "testimonial": [
+      {
+        "type": "paragraph",
+        "text": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words",
+        "spans": []
+      }
+    ],
+    "person": "John Doe",
+    "title": "Software eng. at Prismic"
+  }
 }
