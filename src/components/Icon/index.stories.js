@@ -20,6 +20,14 @@ const styles = {
     content: `url('${Icon.encode('notIncluded')}')`,
     color: '#ffffff',
   },
+  '.play:before': {
+    content: `url('${Icon.encode('play')}')`,
+    color: 'secondary',
+  },
+  '.playBlack:before': {
+    content: `url('${Icon.encode('playBlack')}')`,
+    color: '#ffffff',
+  },
 }
 
 const CreateBox = ({ name, children }) => (
@@ -50,6 +58,12 @@ export const Default = () => (
     </CreateBox>
     <CreateBox name="notIncluded">
       <Box as="span" className="not-included" />
+    </CreateBox>
+    <CreateBox name="play">
+      <Box as="span" className="play" />
+    </CreateBox>
+    <CreateBox name="playBlack">
+      <Box as="span" className="playBlack" />
     </CreateBox>
     <CreateBox name="arrowDown">
       <Icon name="arrowDown" />

@@ -38,7 +38,7 @@ const NextArrow = (props) => {
       }}
       aria-label="Next"
     >
-      <Icon icon="arrowRight" />
+      <Icon name="arrowRight" />
     </Box>
   )
 }
@@ -62,7 +62,7 @@ const PrevArrow = (props) => {
       }}
       aria-label="Previous"
     >
-      <Icon icon="arrowLeft" />
+      <Icon name="arrowLeft" />
     </Box>
   )
 }

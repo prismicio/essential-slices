@@ -37,6 +37,40 @@ const Icons = {
     />
   </g>
 </svg>`,
+  play: `
+<svg
+    aria-hidden="true"
+    focusable="false"
+    width="20"
+    height="20"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <g fill="none">
+        <path d="M-2-2h24v24h-24z" />
+        <path
+            d="M8 14.5l6-4.5-6-4.5v9zm2-14.5c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+            fill="gray"
+            fill-rule="nonzero"
+        />
+    </g>
+</svg>`,
+  playBlack: `
+<svg
+    aria-hidden="true"
+    focusable="false"
+    width="20"
+    height="20"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <g fill="none">
+        <path d="M-2-2h24v24h-24z" />
+        <path
+            d="M8 14.5l6-4.5-6-4.5v9zm2-14.5c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+            fill="currentColor"
+            fill-rule="nonzero"
+        />
+    </g>
+</svg>`,
   arrowDown: (props) => (
     <svg
       width="12"
