@@ -1,4 +1,4 @@
-import React, { cloneElement } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Box } from 'theme-ui'
 
@@ -26,9 +26,7 @@ const TabsItem = ({ active, disabled, label, variant, onActivate }) => {
       className={className}
       {...defaultProps}
     >
-      {cloneElement(label, {
-        className,
-      })}
+      {label}
     </Box>
   )
 }
