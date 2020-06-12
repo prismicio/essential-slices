@@ -26,7 +26,6 @@ const headings = {
         '2.75rem', // 44px
       ],
       lineHeight: 1.3,
-      mb: ['hPaddingHalf', null, 'hPadding'],
     },
     4: {
       lineHeight: 1.2,

@@ -33,11 +33,15 @@ const AlternateGrid = ({ slice }) => {
             <Box
               as="img"
               src={primary.optional_image.url}
-              __css={{ order: [0, imageOrder], margin: 'auto ' }}
+              __css={{ order: [0, imageOrder], my: 'auto ' }}
             />
           )}
           <Box>
-            <Head mr={[null, 'medium']}>
+            <Head
+              sx={{
+                mr: [null, 'medium'],
+              }}
+            >
               <Box as="header">
                 {primary.eyebrow_headline && (
                   <Eyebrow sx={{ textAlign: 'left' }}>
@@ -45,7 +49,12 @@ const AlternateGrid = ({ slice }) => {
                   </Eyebrow>
                 )}
                 {primary.title && (
-                  <Title sx={{ textAlign: 'left', h1: { marginBottom: 0 } }}>
+                  <Title
+                    sx={{
+                      textAlign: 'left',
+                      mb: [0, 0],
+                    }}
+                  >
                     <RichText render={primary.title} />
                   </Title>
                 )}
