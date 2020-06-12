@@ -34,14 +34,14 @@ export const features = {
     alignItems: 'center',
   },
   'li:before': {
-    content: `url('${Icon.encode('featureIcon')}')`,
+    content: `url('${Icon.encode('feature')}')`,
     mr: '25px',
     width: '1em',
     height: '1em',
     color: 'primary',
   },
   'li.not-included:before': {
-    content: `url('${Icon.encode('notIncludedIcon')}')`,
+    content: `url('${Icon.encode('notIncluded')}')`,
     color: 'textGrey',
   },
   '.feature-icon': {

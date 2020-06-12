@@ -6,7 +6,9 @@ export default {
   component: Desc,
 }
 
-export const Default = () => <Desc>Content</Desc>
+export const Default = () => (
+  <Desc sx={{ backgroundColor: 'secondary', p: 'small' }}> Content</Desc>
+)
 
 Default.story = {
   name: 'Default',

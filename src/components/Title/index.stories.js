@@ -6,7 +6,9 @@ export default {
   component: Title,
 }
 
-export const Default = () => <Title>Title text</Title>
+export const Default = () => (
+  <Title sx={{ backgroundColor: 'secondary', p: 'small' }}>Title text</Title>
+)
 
 Default.story = {
   name: 'Default',

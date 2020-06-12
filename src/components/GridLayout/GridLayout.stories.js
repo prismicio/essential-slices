@@ -8,9 +8,11 @@ export default {
   component: GridLayout,
 }
 
+const styles = { '& *': { p: 'small' } }
+
 export const Default = () => (
   <Box bg="grey90" p="1rem">
-    <GridLayout>
+    <GridLayout sx={styles}>
       <Box bg="primary" color="white">
         Number of columns not specified
       </Box>
@@ -42,7 +44,7 @@ export const Default = () => (
 export const Columns = () => (
   <>
     <Box bg="grey90" p="1rem">
-      <GridLayout columns={[1, 2]}>
+      <GridLayout sx={styles} columns={[1, 2]}>
         <Box bg="primary" color="white">
           1/2
         </Box>
@@ -54,7 +56,7 @@ export const Columns = () => (
       </GridLayout>
     </Box>
     <Box bg="grey90" p="1rem">
-      <GridLayout columns={[1, '1fr 2fr']}>
+      <GridLayout sx={styles} columns={[1, '1fr 2fr']}>
         <Box bg="primary" color="white">
           1/3
         </Box>
@@ -62,7 +64,7 @@ export const Columns = () => (
       </GridLayout>
     </Box>
     <Box bg="grey90" p="1rem">
-      <GridLayout columns={[1, 3]}>
+      <GridLayout sx={styles} columns={[1, 3]}>
         <Box bg="primary" color="white">
           1/3
         </Box>
@@ -73,7 +75,7 @@ export const Columns = () => (
       </GridLayout>
     </Box>
     <Box bg="grey90" p="1rem">
-      <GridLayout columns={[1, '1fr 3fr']}>
+      <GridLayout sx={styles} columns={[1, '1fr 3fr']}>
         <Box bg="primary" color="white">
           1/4
         </Box>
@@ -81,7 +83,7 @@ export const Columns = () => (
       </GridLayout>
     </Box>
     <Box bg="grey90" p="1rem">
-      <GridLayout columns={[1, 2, 4]}>
+      <GridLayout sx={styles} columns={[1, 2, 4]}>
         <Box bg="primary" color="white">
           1/4
         </Box>
@@ -98,7 +100,7 @@ export const Columns = () => (
 export const Width = () => (
   <>
     <Box bg="grey90" p="1rem">
-      <GridLayout width="200px">
+      <GridLayout sx={styles} width="200px">
         <Box bg="primary" color="white">
           width=200px
         </Box>
