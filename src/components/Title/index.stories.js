@@ -6,7 +6,11 @@ export default {
   component: Title,
 }
 
-export const Default = () => <Title>Title text</Title>
+export const Default = () => (
+  <Title>
+    <h1>Title text</h1>
+  </Title>
+)
 
 Default.story = {
   name: 'Default',
