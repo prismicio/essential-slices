@@ -1,4 +1,5 @@
 import React from 'react'
+import { Box } from 'theme-ui'
 import Slice from '.'
 
 export default {
@@ -6,7 +7,11 @@ export default {
   component: Slice,
 }
 
-export const Default = () => <Slice>Content</Slice>
+export const Default = () => (
+  <Slice sx={{ backgroundColor: 'grey53' }}>
+    <Box sx={{ backgroundColor: 'secondary', p: 'small' }}>Content</Box>
+  </Slice>
+)
 
 Default.story = {
   name: 'Default',

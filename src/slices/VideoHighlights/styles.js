@@ -13,12 +13,12 @@ const tabItem = {
   backgroundSize: '1em 1em',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'right center',
-  backgroundImage: `url('${Icon.encode('playIcon')}')`,
+  backgroundImage: `url('${Icon.encode('play')}')`,
   ':hover': {
     textDecoration: 'underline',
   },
   '&.active': {
-    backgroundImage: `url('${Icon.encode('playIconBlack')}')`,
+    backgroundImage: `url('${Icon.encode('playBlack')}')`,
     fontWeight: 'bold',
   },
 }

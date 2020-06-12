@@ -7,7 +7,7 @@ export default {
 }
 
 export const Default = () => (
-  <Title>
+  <Title sx={{ backgroundColor: 'secondary', p: 'small' }}>
     <h1>Title text</h1>
   </Title>
 )

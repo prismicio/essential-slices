@@ -6,7 +6,9 @@ export default {
   component: Head,
 }
 
-export const Default = () => <Head>Content</Head>
+export const Default = () => (
+  <Head sx={{ backgroundColor: 'secondary', p: 'small' }}>Content</Head>
+)
 
 Default.story = {
   name: 'Default',

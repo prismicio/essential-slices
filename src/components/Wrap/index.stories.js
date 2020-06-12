@@ -6,7 +6,9 @@ export default {
   component: Wrap,
 }
 
-export const Default = () => <Wrap>Content</Wrap>
+export const Default = () => (
+  <Wrap sx={{ backgroundColor: 'secondary', p: 'small' }}>Content</Wrap>
+)
 
 Default.story = {
   name: 'Default',
