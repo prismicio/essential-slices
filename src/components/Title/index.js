@@ -4,7 +4,15 @@ import { Box } from 'theme-ui'
 
 const Title = ({ children, ...props }) => {
   return (
-    <Box __themeKey="container" variant="title" {...props}>
+    <Box
+      __themeKey="container"
+      variant="title"
+      __css={{
+        mb: ['hPaddingHalf', null, 'hPadding'],
+        '& *': { mb: 0 },
+      }}
+      {...props}
+    >
       {children}
     </Box>
   )

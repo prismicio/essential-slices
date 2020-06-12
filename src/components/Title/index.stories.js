@@ -7,7 +7,9 @@ export default {
 }
 
 export const Default = () => (
-  <Title sx={{ backgroundColor: 'secondary', p: 'small' }}>Title text</Title>
+  <Title sx={{ backgroundColor: 'secondary', p: 'small' }}>
+    <h1>Title text</h1>
+  </Title>
 )
 
 Default.story = {

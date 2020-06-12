@@ -26,7 +26,6 @@ const headings = {
         '2.75rem', // 44px
       ],
       lineHeight: 1.3,
-      mb: ['hPaddingHalf', null, 'hPadding'],
     },
     4: {
       lineHeight: 1.2,
@@ -70,6 +69,15 @@ export default {
       color: 'white',
       '&:hover': {
         backgroundColor: 'grey20',
+      },
+    },
+    light: {
+      bg: 'white',
+      color: 'grey0',
+      border: '1px solid',
+      borderColor: 'grey0',
+      '&:hover': {
+        backgroundColor: 'grey90',
       },
     },
   },
