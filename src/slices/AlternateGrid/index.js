@@ -33,7 +33,7 @@ const AlternateGrid = ({ slice }) => {
             <Box
               as="img"
               src={primary.optional_image.url}
-              __css={{ order: [0, imageOrder], my: 'auto ' }}
+              sx={{ order: [0, imageOrder], my: 'auto ' }}
             />
           )}
           <Box>
@@ -69,7 +69,7 @@ const AlternateGrid = ({ slice }) => {
               columns={[1, 2]}
               rowGap="small"
               columnGap={[null, 'medium']}
-              mr={['small', 'medium', imageOrder === 0 ? 'xlarge' : '']}
+              sx={{ mr: ['small', 'medium', imageOrder === 0 ? 'xlarge' : ''] }}
             >
               {items.map(
                 ({ description, title, optional_icon: optionalIcon }) => {

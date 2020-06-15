@@ -10,7 +10,7 @@ const CustomerLogos = ({ slice }) => {
   return (
     <Slice sx={{ backgroundColor: 'secondary', textAlign: 'center' }}>
       <Wrap>
-        <Box color="primary">
+        <Box sx={{ color: 'primary' }}>
           <RichText render={primary.eyebrow_headline} />
         </Box>
         <Box>
@@ -19,7 +19,7 @@ const CustomerLogos = ({ slice }) => {
               <Box key={uuid()}>
                 <Box
                   as="img"
-                  __css={{ mx: 'auto', display: 'block' }}
+                  sx={{ mx: 'auto', display: 'block' }}
                   src={item.logo.url}
                   alt={item.logo.alt}
                   width={item.logo.dimensions.width}

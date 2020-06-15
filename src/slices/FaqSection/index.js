@@ -33,7 +33,7 @@ const FaqSection = ({ slice }) => {
               </Title>
             )}
             {primary.description && (
-              <Desc mb="large">
+              <Desc sx={{ mb: 'large' }}>
                 <RichText render={primary.description} />
               </Desc>
             )}

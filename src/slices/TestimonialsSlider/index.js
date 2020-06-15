@@ -33,14 +33,14 @@ const TestimonialsSlider = ({ slice }) => {
           <RichText render={primary.title} />
         </Box>
         {primary.description && (
-          <Desc mb="large">
+          <Desc sx={{ mb: 'large' }}>
             <RichText render={primary.description} />
           </Desc>
         )}
-        <Box __css={{ width: 'full', maxWidth: '840px', m: '0 auto' }}>
+        <Box sx={{ width: 'full', maxWidth: '840px', m: '0 auto' }}>
           <Slider {...settings}>
             {items.map((item) => (
-              <Box key={uuid()} px={[null, 'small']}>
+              <Box key={uuid()} sx={{ px: [null, 'small'] }}>
                 <Card
                   key={item.toString()}
                   as="blockquote"
@@ -63,7 +63,7 @@ const TestimonialsSlider = ({ slice }) => {
                   <Card.Footer>
                     <Box
                       as="span"
-                      __css={{
+                      sx={{
                         fontSize: 'kicker',
                         fontWeight: 'heading',
                         mb: 'xsmall',
@@ -72,7 +72,7 @@ const TestimonialsSlider = ({ slice }) => {
                     >
                       {item.person}
                     </Box>
-                    <Box as="span" __css={{ fontSize: 'tiny' }}>
+                    <Box as="span" sx={{ fontSize: 'tiny' }}>
                       {item.title}
                     </Box>
                   </Card.Footer>

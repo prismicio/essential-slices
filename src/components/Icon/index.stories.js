@@ -14,19 +14,15 @@ const styles = {
   },
   '.feature:before': {
     content: `url('${Icon.encode('feature')}')`,
-    color: 'secondary',
   },
   '.not-included:before': {
     content: `url('${Icon.encode('notIncluded')}')`,
-    color: '#ffffff',
   },
   '.play:before': {
     content: `url('${Icon.encode('play')}')`,
-    color: 'secondary',
   },
   '.playBlack:before': {
     content: `url('${Icon.encode('playBlack')}')`,
-    color: '#ffffff',
   },
 }
 
@@ -45,7 +41,7 @@ CreateBox.propTypes = {
 
 export const Default = () => (
   <Box
-    __css={{
+    sx={{
       width: 'full',
       maxWidth: '50rem',
       mx: 'auto',

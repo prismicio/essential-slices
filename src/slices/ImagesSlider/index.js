@@ -23,7 +23,7 @@ const ImagesSlider = ({ slice }) => {
   return (
     <Slice sx={{ textAlign: ['left', 'center'] }}>
       <Wrap>
-        <Box mb="large">
+        <Box sx={{ mb: 'large' }}>
           <Box as="header">
             {primary.eyebrow_headline && (
               <Eyebrow>
@@ -34,14 +34,14 @@ const ImagesSlider = ({ slice }) => {
           </Box>
 
           {primary.description && (
-            <Desc mx={[null, 'auto']}>
+            <Desc sx={{ mx: [null, 'auto'] }}>
               <RichText render={primary.description} />
             </Desc>
           )}
         </Box>
 
         <Box
-          __css={{
+          sx={{
             width: 'full',
             maxWidth: '100vw',
           }}
@@ -51,7 +51,7 @@ const ImagesSlider = ({ slice }) => {
               <Box key={uuid()}>
                 <Box
                   as="figure"
-                  __css={{
+                  sx={{
                     img: {
                       maxWidth: '840px',
                       width: 'full',
@@ -63,11 +63,10 @@ const ImagesSlider = ({ slice }) => {
                     src={item.image.url}
                     alt={item.image.alt}
                     width={item.image.dimensions.width}
-                    mx="auto"
-                    mb="medium"
+                    sx={{ mx: 'auto', mb: 'medium' }}
                   />
                   {item.description && (
-                    <Desc mx={[null, 'auto']}>
+                    <Desc sx={{ mx: [null, 'auto'] }}>
                       <fig-caption>
                         <RichText render={item.description} />
                       </fig-caption>

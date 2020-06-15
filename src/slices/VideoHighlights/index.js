@@ -26,7 +26,7 @@ const VideoHighlights = ({ slice }) => {
             <Tabs variant="vertical">
               {items.map((item) => {
                 const tabLabel = (
-                  <Box key={uuid()} as="a" __css={tabItem}>
+                  <Box key={uuid()} as="a" sx={tabItem}>
                     {RichText.asText(item.video_title)}
                   </Box>
                 )

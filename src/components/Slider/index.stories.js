@@ -31,7 +31,7 @@ const CreateBoxes = (n) => {
 }
 
 export const Default = () => (
-  <Box __css={{ width: 'full', maxWidth: '50rem', mx: 'auto' }}>
+  <Box sx={{ width: 'full', maxWidth: '50rem', mx: 'auto' }}>
     <Slider infinite={false} speed={500} slidesToShow={1} slidesToScroll={1}>
       {CreateBoxes(5)}
     </Slider>
@@ -39,7 +39,7 @@ export const Default = () => (
 )
 
 export const WithDots = () => (
-  <Box __css={{ width: 'full', maxWidth: '50rem', mx: 'auto', mt: 'medium' }}>
+  <Box sx={{ width: 'full', maxWidth: '50rem', mx: 'auto', mt: 'medium' }}>
     <Slider
       dots
       dotsWithLabel
@@ -55,7 +55,7 @@ export const WithDots = () => (
 )
 
 export const Responsive = () => (
-  <Box __css={{ width: 'full', maxWidth: '50rem', mx: 'auto', mt: 'medium' }}>
+  <Box sx={{ width: 'full', maxWidth: '50rem', mx: 'auto', mt: 'medium' }}>
     <Slider
       infinite={false}
       speed={500}
