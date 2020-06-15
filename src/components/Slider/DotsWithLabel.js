@@ -5,6 +5,7 @@ const DotsWithLabel = (index, dotsLabel) => {
   const dotStyles = {
     span: {
       opacity: 0,
+      pointerEvents: 'none',
     },
 
     '&:hover span': {

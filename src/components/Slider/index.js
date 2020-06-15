@@ -17,8 +17,8 @@ const arrowStyles = {
   outline: 'none',
   padding: '0.5rem',
   position: 'absolute',
-  top: ['110%', null, null, '50%'],
-  transform: 'translate(0, -50%)',
+  bottom: ['-70px', null, null, '50%'],
+  transform: [null, null, null, 'translate(0, 50%)'],
   width: '2.75rem',
 }
 
