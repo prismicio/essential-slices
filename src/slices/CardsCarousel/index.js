@@ -20,11 +20,11 @@ const CardsCarousel = ({ slice }) => {
           <RichText render={primary.title} />
         </Box>
         {primary.description && (
-          <Desc mb="large">
+          <Desc sx={{ mb: 'large' }}>
             <RichText render={primary.description} />
           </Desc>
         )}
-        <Box __css={{ width: 'full', maxWidth: '100vw' }}>
+        <Box sx={{ width: 'full', maxWidth: '100vw' }}>
           <Slider
             infinite={false}
             speed="500"
@@ -66,11 +66,11 @@ const CardsCarousel = ({ slice }) => {
             ]}
           >
             {items.map((item) => (
-              <Box key={uuid()} px={[null, 'small']}>
+              <Box key={uuid()} sx={{ px: [null, 'small'] }}>
                 <Card key={item.toString()}>
                   <Card.Image image={item.image} />
                   <Card.Content>
-                    <Box as="h3" __css={{ fontSize: 'base', mb: 'small' }}>
+                    <Box as="h3" sx={{ fontSize: 'base', mb: 'small' }}>
                       {RichText.asText(item.title)}
                     </Box>
                     <Box sx={{ fontWeight: 'lean' }}>

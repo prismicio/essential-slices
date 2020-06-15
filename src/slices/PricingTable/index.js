@@ -47,7 +47,7 @@ const PricingTable = ({
           <Box as="header">
             {eyebrow_headline && (
               <Box
-                __css={{
+                sx={{
                   mb: '.6em',
                   color: 'primary',
                   fontSize: 'lg',
@@ -65,7 +65,7 @@ const PricingTable = ({
             </Desc>
           )}
         </Head>
-        <Box mt="vMargin2x">
+        <Box sx={{ mt: 'vMargin2x' }}>
           <Box as="ol" role="list" ariaLabel sx={table}>
             {items &&
               items.map((item) => (
@@ -74,14 +74,14 @@ const PricingTable = ({
                     <Box as="header">
                       <h3>{RichText.asText(item.plan_title)}</h3>
                       <Box
-                        __css={{
+                        sx={{
                           color: 'textGrey',
                         }}
                       >
                         {RichText.asText(item.price_option)}
                       </Box>
                     </Box>
-                    <Box __css={features}>
+                    <Box sx={features}>
                       <RichText
                         htmlSerializer={featuresSerializer}
                         render={item.features}

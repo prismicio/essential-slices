@@ -15,7 +15,7 @@ export const CardsCarousel = () => (
     <Card>
       <Card.Image image={cardsCarousel.image} />
       <Card.Content>
-        <Box as="h3" __css={{ fontSize: 'base', mb: 'small' }}>
+        <Box as="h3" sx={{ fontSize: 'base', mb: 'small' }}>
           {RichText.asText(cardsCarousel.title)}
         </Box>
         <Box sx={{ fontWeight: 'lean' }}>
@@ -27,7 +27,7 @@ export const CardsCarousel = () => (
 )
 
 export const TestimonialsSlider = () => (
-  <Box __css={{ width: 'full', maxWidth: '840px', m: '0 auto' }}>
+  <Box sx={{ width: 'full', maxWidth: '840px', m: '0 auto' }}>
     <Card
       as="blockquote"
       sx={{ py: ['large', null, null, 'xlarge'], mb: 'small' }}
@@ -49,7 +49,7 @@ export const TestimonialsSlider = () => (
       <Card.Footer>
         <Box
           as="span"
-          __css={{
+          sx={{
             fontSize: 'kicker',
             fontWeight: 'heading',
             mb: 'xsmall',
@@ -58,7 +58,7 @@ export const TestimonialsSlider = () => (
         >
           {testimonialsSlider.person}
         </Box>
-        <Box as="span" __css={{ fontSize: 'tiny' }}>
+        <Box as="span" sx={{ fontSize: 'tiny' }}>
           {testimonialsSlider.title}
         </Box>
       </Card.Footer>

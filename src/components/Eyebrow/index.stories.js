@@ -9,7 +9,7 @@ export default {
 
 export const Default = () => (
   <Box
-    __css={{
+    sx={{
       backgroundColor: 'secondary',
       width: 'full',
       maxWidth: '50rem',
