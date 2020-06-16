@@ -78,7 +78,7 @@ const Slider = ({
     : {}
 
   return (
-    <Box sx={slickStyles}>
+    <Box __css={slickStyles}>
       <SlickSlider
         appendDots={AppendDots}
         draggable={draggable}
