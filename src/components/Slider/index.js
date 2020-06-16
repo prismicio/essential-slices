@@ -3,23 +3,8 @@ import PropTypes from 'prop-types'
 import { Box } from 'theme-ui'
 import SlickSlider from 'react-slick'
 
-import './slick.css'
+import { arrowStyles, dotContainerStyles, slickStyles } from './styles'
 import DotsWithLabel from './DotsWithLabel'
-
-const arrowStyles = {
-  cursor: 'pointer',
-  borderRadius: '50%',
-  display: 'block',
-  fontSize: 0,
-  height: '2.75rem',
-  lineHeight: 0,
-  outline: 'none',
-  padding: '0.5rem',
-  position: 'absolute',
-  bottom: ['-70px', null, null, '50%'],
-  transform: [null, null, null, 'translate(0, 50%)'],
-  width: '2.75rem',
-}
 
 const NextArrow = (props) => {
   const { onClick } = props
@@ -63,6 +48,7 @@ NextArrow.propTypes = {
 
 const PrevArrow = (props) => {
   const { onClick } = props
+
   return (
     <Box
       as="button"
@@ -101,22 +87,8 @@ PrevArrow.propTypes = {
 }
 
 const AppendDots = (dots) => {
-  const dotsStyles = {
-    'button::before': {
-      bg: 'dark',
-    },
-
-    'button:focus': {
-      borderColor: 'primaryDark',
-    },
-
-    '.slick-active button::before': {
-      bg: 'primaryDark',
-    },
-  }
-
   return (
-    <Box __css={dotsStyles} __themeKey="slider.appendDots">
+    <Box __css={dotContainerStyles} __themeKey="slider.appendDots">
       <ul>{dots}</ul>
     </Box>
   )
@@ -135,17 +107,19 @@ const Slider = ({
     : {}
 
   return (
-    <SlickSlider
-      appendDots={AppendDots}
-      draggable={draggable}
-      nextArrow={<NextArrow />}
-      prevArrow={<PrevArrow />}
-      speed={speed}
-      {...customPagingProp}
-      {...props}
-    >
-      {children}
-    </SlickSlider>
+    <Box sx={slickStyles}>
+      <SlickSlider
+        appendDots={AppendDots}
+        draggable={draggable}
+        nextArrow={<NextArrow />}
+        prevArrow={<PrevArrow />}
+        speed={speed}
+        {...customPagingProp}
+        {...props}
+      >
+        {children}
+      </SlickSlider>
+    </Box>
   )
 }
 
