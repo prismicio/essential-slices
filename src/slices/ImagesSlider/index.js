@@ -7,7 +7,7 @@ import { Box } from 'theme-ui'
 import { Desc, Eyebrow, Slice, Slider, Wrap } from '../../components'
 import { structuredTextPropTypes } from '../../utils/prop-types'
 
-const ImagesSlider = ({ slice }) => {
+const ImagesSlider = ({ slice, linkResolver }) => {
   const { items, primary } = slice
 
   const settings = {
@@ -27,15 +27,21 @@ const ImagesSlider = ({ slice }) => {
           <Box as="header">
             {primary.eyebrow_headline && (
               <Eyebrow>
-                <RichText render={primary.eyebrow_headline} />
+                <RichText
+                  render={primary.eyebrow_headline}
+                  linkResolver={linkResolver}
+                />
               </Eyebrow>
             )}
-            <RichText render={primary.title} />
+            <RichText render={primary.title} linkResolver={linkResolver} />
           </Box>
 
           {primary.description && (
             <Desc sx={{ mx: [null, 'auto'] }}>
-              <RichText render={primary.description} />
+              <RichText
+                render={primary.description}
+                linkResolver={linkResolver}
+              />
             </Desc>
           )}
         </Box>
@@ -68,7 +74,10 @@ const ImagesSlider = ({ slice }) => {
                   {item.description && (
                     <Desc sx={{ mx: [null, 'auto'] }}>
                       <fig-caption>
-                        <RichText render={item.description} />
+                        <RichText
+                          render={item.description}
+                          linkResolver={linkResolver}
+                        />
                       </fig-caption>
                     </Desc>
                   )}
@@ -91,6 +100,11 @@ ImagesSlider.propTypes = {
     }).isRequired,
     items: PropTypes.array.isRequired,
   }).isRequired,
+  linkResolver: PropTypes.func,
+}
+
+ImagesSlider.defaultProps = {
+  linkResolver: () => '/404',
 }
 
 export default ImagesSlider

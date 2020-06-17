@@ -1,17 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { RichText } from 'prismic-reactjs'
+import { RichText, Link } from 'prismic-reactjs'
 import { Box } from 'theme-ui'
 import uuid from 'react-uuid'
 import { Grid, Slice, Wrap } from '../../components'
 
-const CustomerLogos = ({ slice }) => {
+const CustomerLogos = ({ slice, linkResolver }) => {
   const { items, primary } = slice
   return (
     <Slice sx={{ backgroundColor: 'secondary', textAlign: 'center' }}>
       <Wrap>
         <Box sx={{ color: 'primary' }}>
-          <RichText render={primary.eyebrow_headline} />
+          <RichText
+            render={primary.eyebrow_headline}
+            linkResolver={linkResolver}
+          />
         </Box>
         <Box>
           <Grid rowGap="vMargin" columnGap="hPadding">
@@ -28,8 +31,14 @@ const CustomerLogos = ({ slice }) => {
             ))}
           </Grid>
 
-          <Box as="a" href={primary.call_to_action_link.url}>
-            <RichText render={primary.call_to_action} />
+          <Box
+            as="a"
+            href={Link.url(primary.call_to_action_link, linkResolver)}
+          >
+            <RichText
+              render={primary.call_to_action}
+              linkResolver={linkResolver}
+            />
           </Box>
         </Box>
       </Wrap>
@@ -48,6 +57,11 @@ CustomerLogos.propTypes = {
     }).isRequired,
     items: PropTypes.array.isRequired,
   }).isRequired,
+  linkResolver: PropTypes.func,
+}
+
+CustomerLogos.defaultProps = {
+  linkResolver: () => '/404',
 }
 
 export default CustomerLogos

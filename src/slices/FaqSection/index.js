@@ -14,7 +14,7 @@ import {
 } from '../../components'
 import { structuredTextPropTypes } from '../../utils/prop-types'
 
-const FaqSection = ({ slice }) => {
+const FaqSection = ({ slice, linkResolver }) => {
   const { items, primary } = slice
 
   return (
@@ -24,17 +24,23 @@ const FaqSection = ({ slice }) => {
           <Box as="header">
             {primary.eyebrow_headline && (
               <Eyebrow>
-                <RichText render={primary.eyebrow_headline} />
+                <RichText
+                  render={primary.eyebrow_headline}
+                  linkResolver={linkResolver}
+                />
               </Eyebrow>
             )}
             {primary.title && (
               <Title>
-                <RichText render={primary.title} />
+                <RichText render={primary.title} linkResolver={linkResolver} />
               </Title>
             )}
             {primary.description && (
               <Desc sx={{ mb: 'large' }}>
-                <RichText render={primary.description} />
+                <RichText
+                  render={primary.description}
+                  linkResolver={linkResolver}
+                />
               </Desc>
             )}
           </Box>
@@ -48,6 +54,7 @@ const FaqSection = ({ slice }) => {
                   <Accordion.Item
                     title={title}
                     text={text}
+                    linkResolver={linkResolver}
                     sx={{
                       mb: 'small',
                     }}
@@ -74,6 +81,11 @@ FaqSection.propTypes = {
     }).isRequired,
     items: PropTypes.array.isRequired,
   }).isRequired,
+  linkResolver: PropTypes.func,
+}
+
+FaqSection.defaultProps = {
+  linkResolver: () => '/404',
 }
 
 export default FaqSection

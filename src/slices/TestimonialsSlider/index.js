@@ -7,7 +7,7 @@ import uuid from 'react-uuid'
 import { structuredTextPropTypes } from '../../utils/prop-types'
 import { Card, Desc, Eyebrow, Slider, Slice, Wrap } from '../../components'
 
-const TestimonialsSlider = ({ slice }) => {
+const TestimonialsSlider = ({ slice, linkResolver }) => {
   const { primary, items } = slice
 
   const settings = {
@@ -27,14 +27,20 @@ const TestimonialsSlider = ({ slice }) => {
         <Box as="header">
           {primary.eyebrow_headline && (
             <Eyebrow>
-              <RichText render={primary.eyebrow_headline} />
+              <RichText
+                render={primary.eyebrow_headline}
+                linkResolver={linkResolver}
+              />
             </Eyebrow>
           )}
-          <RichText render={primary.title} />
+          <RichText render={primary.title} linkResolver={linkResolver} />
         </Box>
         {primary.description && (
           <Desc sx={{ mb: 'large' }}>
-            <RichText render={primary.description} />
+            <RichText
+              render={primary.description}
+              linkResolver={linkResolver}
+            />
           </Desc>
         )}
         <Box sx={{ width: 'full', maxWidth: '840px', m: '0 auto' }}>
@@ -57,7 +63,10 @@ const TestimonialsSlider = ({ slice }) => {
                         mb: ['small', null, null, 'medium'],
                       }}
                     >
-                      <RichText render={item.testimonial} />
+                      <RichText
+                        render={item.testimonial}
+                        linkResolver={linkResolver}
+                      />
                     </Box>
                   </Card.Content>
                   <Card.Footer>
@@ -95,6 +104,11 @@ TestimonialsSlider.propTypes = {
     }).isRequired,
     items: PropTypes.array.isRequired,
   }).isRequired,
+  linkResolver: PropTypes.func,
+}
+
+TestimonialsSlider.defaultProps = {
+  linkResolver: () => '/404',
 }
 
 export default TestimonialsSlider
