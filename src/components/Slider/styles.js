@@ -116,16 +116,16 @@ export const slickStyles = {
     display: 'block',
     boxSizing: 'border-box',
 
-    '-webkit-user-select': 'none',
-    '-moz-user-select': 'none',
-    '-ms-user-select': 'none',
+    WebkitUserSelect: 'none',
+    MozUserSelect: 'none',
+    msUserSelect: 'none',
     userSelect: 'none',
 
-    '-webkit-touch-callout': 'none',
-    '-khtml-user-select': 'none',
-    '-ms-touch-action': 'pan-y',
+    WebkitTouchCallout: 'none',
+    KhtmlUserSelect: 'none',
+    msTouchAction: 'pan-y',
     touchAction: 'pan-y',
-    '-webkit-tap-highlight-color': 'transparent',
+    WebkitTapHighlightColor: 'transparent',
   },
 
   '.slick-list': {
@@ -145,10 +145,10 @@ export const slickStyles = {
   },
 
   '.slick-slider .slick-track, .slick-slider .slick-list': {
-    '-webkit-transform': 'translate3d(0, 0, 0)',
-    '-moz-transform': 'translate3d(0, 0, 0)',
-    '-ms-transform': 'translate3d(0, 0, 0)',
-    '-o-transform': 'translate3d(0, 0, 0)',
+    WebkitTransform: 'translate3d(0, 0, 0)',
+    MozTransform: 'translate3d(0, 0, 0)',
+    msTransform: 'translate3d(0, 0, 0)',
+    OTransform: 'translate3d(0, 0, 0)',
     transform: 'translate3d(0, 0, 0)',
   },
 
