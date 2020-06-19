@@ -62,7 +62,7 @@ const AccordionItem = ({ active, title, text, onClick, ...props }) => {
                 transition: 'all 0.1s linear',
               }}
             >
-              <Icon icon="arrowDown" />
+              <Icon name="arrowDown" />
             </Box>
           </Box>
         </Box>
