@@ -48,9 +48,9 @@ Grid.defaultProps = {
 }
 
 Grid.propTypes = {
-  columns: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  columnGap: PropTypes.number,
-  rowGap: PropTypes.number,
+  columns: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
+  columnGap: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.array]),
+  rowGap: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 }
 

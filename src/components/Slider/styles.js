@@ -68,8 +68,8 @@ export const dotStyles = {
     display: 'inline-block',
     borderRadius: '50%',
 
-    '-webkit-font-smoothing': 'antialiased',
-    '-moz-osx-font-smoothing': 'grayscale',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
   },
 
   span: {

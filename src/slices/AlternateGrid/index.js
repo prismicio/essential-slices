@@ -72,9 +72,10 @@ const AlternateGrid = ({ slice }) => {
               sx={{ mr: ['small', 'medium', imageOrder === 0 ? 'xlarge' : ''] }}
             >
               {items.map(
-                ({ description, title, optional_icon: optionalIcon }) => {
+                ({ description, title, optional_icon: optionalIcon }, i) => {
                   return (
                     <TextBlock
+                      key={`text-block-${i + 1}`}
                       title={title}
                       description={description}
                       icon={optionalIcon}
@@ -83,8 +84,8 @@ const AlternateGrid = ({ slice }) => {
                 }
               )}
               {primary.call_to_action &&
-                primary.call_to_action.map(({ text, url, color }) => {
-                  return <Button label={text} link={url} variant={color} />
+                primary.call_to_action.map(({ text, url, color }, i) => {
+                  return <Button key={`call-to-action-${i + 1}`}label={text} link={url} variant={color} />
                 })}
             </Grid>
           </Box>
