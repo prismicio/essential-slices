@@ -3,9 +3,9 @@ import { Box } from 'theme-ui'
 
 import { imagePropTypes } from '../../utils/prop-types'
 
-const CardImage = ({ image, ...props }) => {
+const CardImage = ({ image = {}, ...props }) => {
   const { url, alt, dimensions } = image
-  return (
+  return url ? (
     <Box
       as="img"
       __css={{ m: '0 auto', maxWidth: 'full', mb: 'medium' }}
@@ -14,7 +14,7 @@ const CardImage = ({ image, ...props }) => {
       width={dimensions.width}
       {...props}
     />
-  )
+  ) : null
 }
 
 CardImage.propTypes = {
