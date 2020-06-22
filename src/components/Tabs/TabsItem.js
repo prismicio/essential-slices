@@ -42,7 +42,7 @@ TabsItem.propTypes = {
   active: PropTypes.bool,
   disabled: PropTypes.bool,
   variant: PropTypes.string,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   onActivate: PropTypes.func,
 }
 

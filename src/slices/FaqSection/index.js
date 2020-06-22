@@ -43,9 +43,10 @@ const FaqSection = ({ slice }) => {
               <Box as="img" src={primary.optional_image.url} />
             )}
             <Accordion>
-              {items.map(({ text, title }) => {
+              {items.map(({ text, title }, i) => {
                 return (
                   <Accordion.Item
+                    key={`accordion-item-${i + 1}`}
                     title={title}
                     text={text}
                     sx={{
