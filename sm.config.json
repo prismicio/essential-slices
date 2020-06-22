@@ -3,7 +3,7 @@
   "framework": "next",
   "gitUrl": "//github.com/prismicio/essential-slices",
   "pathToLibrary": "src",
-  "dependencies": ["theme-ui", "react-uuid", "react-slick"],
+  "dependencies": [],
   "css": [],
   "devDependencies": []
 }
