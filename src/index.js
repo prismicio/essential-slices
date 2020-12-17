@@ -1,3 +1,3 @@
-import React from 'react'
-
-export default () => <div>hi!</div>
+export { default as theme } from './theme'
+import * as Slices from './slices'
+export { Slices }

@@ -3,7 +3,7 @@
   "framework": "next",
   "gitUrl": "//github.com/prismicio/essential-slices",
   "pathToLibrary": "src",
-  "dependencies": [],
+  "dependencies": ["theme-ui"],
   "css": [],
   "devDependencies": []
 }
