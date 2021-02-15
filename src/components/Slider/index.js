@@ -29,7 +29,7 @@ const NextArrow = (props) => {
 }
 
 NextArrow.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
 }
 
 const PrevArrow = (props) => {
@@ -54,7 +54,7 @@ const PrevArrow = (props) => {
 }
 
 PrevArrow.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
 }
 
 const AppendDots = (dots) => {
