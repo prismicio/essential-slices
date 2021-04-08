@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { RichText } from 'prismic-reactjs'
-import { Box, Context } from 'theme-ui'
+import { Box, useThemeUI } from 'theme-ui'
 import {
   Button,
   Desc,
@@ -17,7 +17,7 @@ import { structuredTextPropTypes } from '../../utils/prop-types'
 
 const AlternateGrid = ({ slice }) => {
   const { items, primary } = slice
-  const { theme } = useContext(Context)
+  const { theme } = useThemeUI()
   const defaultColumnSizes = ['40% 60%', '60% 40%']
   const imageOrder = primary.image_side === 'left' ? 0 : 1
   const columnValues = theme.container.grid.spans
