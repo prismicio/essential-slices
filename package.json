@@ -1,6 +1,6 @@
 {
   "name": "essential-slices",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "source": "src/index.js",
   "main": "dist/index.js",
