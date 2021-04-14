@@ -4,7 +4,14 @@ import { RichText } from 'prismic-reactjs'
 import { Box } from 'theme-ui'
 import { Icon } from '..'
 
-const AccordionItem = ({ active, title, text, onClick, ...props }) => {
+const AccordionItem = ({
+  active,
+  title,
+  text,
+  onClick,
+  linkResolver,
+  ...props
+}) => {
   return (
     <Box {...props}>
       <Box>
@@ -47,7 +54,7 @@ const AccordionItem = ({ active, title, text, onClick, ...props }) => {
             data-accordion-toggle
             onClick={onClick}
           >
-            <RichText render={title} />
+            <RichText render={title} linkResolver={linkResolver} />
             <Box
               __css={{
                 display: 'block',
@@ -77,7 +84,7 @@ const AccordionItem = ({ active, title, text, onClick, ...props }) => {
               marginBottom: active ? '0' : 'cPadding',
             }}
           >
-            <RichText render={text} />
+            <RichText render={text} linkResolver={linkResolver} />
           </Box>
         )}
       </Box>
@@ -102,6 +109,7 @@ AccordionItem.propTypes = {
     })
   ),
   onClick: PropTypes.func,
+  linkResolver: PropTypes.func,
 }
 
 AccordionItem.defaultProps = {
@@ -109,6 +117,7 @@ AccordionItem.defaultProps = {
   title: null,
   text: null,
   onClick: null,
+  linkResolver: () => '/404',
 }
 
 export default AccordionItem

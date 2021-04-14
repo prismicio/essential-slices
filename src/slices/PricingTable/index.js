@@ -57,11 +57,11 @@ const PricingTable = ({
                 {RichText.asText(eyebrow_headline)}
               </Box>
             )}
-            <RichText render={title} />
+            <RichText render={title} linkResolver={linkResolver} />
           </Box>
           {description && (
             <Desc>
-              <RichText render={description} />
+              <RichText render={description} linkResolver={linkResolver} />
             </Desc>
           )}
         </Head>

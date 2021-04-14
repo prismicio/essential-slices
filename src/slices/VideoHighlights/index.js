@@ -7,18 +7,21 @@ import { Desc, Title, Slice, Tabs, Video, Wrap } from '../../components'
 import { structuredTextPropTypes } from '../../utils/prop-types'
 import tabItem from './styles'
 
-const VideoHighlights = ({ slice }) => {
+const VideoHighlights = ({ slice, linkResolver }) => {
   const { items, primary } = slice
   return (
     <Slice sx={{ textAlign: 'center' }}>
       <Wrap>
         <Title as="header">
-          <RichText render={primary.title} />
+          <RichText render={primary.title} linkResolver={linkResolver} />
         </Title>
 
         {primary.description && (
           <Desc>
-            <RichText render={primary.description} />
+            <RichText
+              render={primary.description}
+              linkResolver={linkResolver}
+            />
           </Desc>
         )}
         <Box data-video-player>
@@ -58,6 +61,11 @@ VideoHighlights.propTypes = {
     }).isRequired,
     items: PropTypes.array.isRequired,
   }).isRequired,
+  linkResolver: PropTypes.func,
+}
+
+VideoHighlights.defaultProps = {
+  linkResolver: () => '/404',
 }
 
 export default VideoHighlights

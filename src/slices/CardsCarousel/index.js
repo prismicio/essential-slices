@@ -6,7 +6,7 @@ import uuid from 'react-uuid'
 
 import { Card, Desc, Eyebrow, Slider, Slice, Wrap } from '../../components'
 
-const CardsCarousel = ({ slice }) => {
+const CardsCarousel = ({ slice, linkResolver }) => {
   const { primary, items } = slice
   return (
     <Slice>
@@ -14,14 +14,20 @@ const CardsCarousel = ({ slice }) => {
         <Box as="header">
           {primary.eyebrow_headline && (
             <Eyebrow>
-              <RichText render={primary.eyebrow_headline} />
+              <RichText
+                render={primary.eyebrow_headline}
+                linkResolver={linkResolver}
+              />
             </Eyebrow>
           )}
-          <RichText render={primary.title} />
+          <RichText render={primary.title} linkResolver={linkResolver} />
         </Box>
         {primary.description && (
           <Desc sx={{ mb: 'large' }}>
-            <RichText render={primary.description} />
+            <RichText
+              render={primary.description}
+              linkResolver={linkResolver}
+            />
           </Desc>
         )}
         <Box sx={{ width: 'full', maxWidth: '100vw' }}>
@@ -74,7 +80,10 @@ const CardsCarousel = ({ slice }) => {
                       {RichText.asText(item.title)}
                     </Box>
                     <Box sx={{ fontWeight: 'lean' }}>
-                      <RichText render={item.content} />
+                      <RichText
+                        render={item.content}
+                        linkResolver={linkResolver}
+                      />
                     </Box>
                   </Card.Content>
                 </Card>
@@ -96,6 +105,11 @@ CardsCarousel.propTypes = {
     }).isRequired,
     items: PropTypes.array.isRequired,
   }).isRequired,
+  linkResolver: PropTypes.func,
+}
+
+CardsCarousel.defaultProps = {
+  linkResolver: () => '/404',
 }
 
 export default CardsCarousel

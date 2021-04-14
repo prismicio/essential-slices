@@ -15,7 +15,7 @@ import {
 } from '../../components'
 import { structuredTextPropTypes } from '../../utils/prop-types'
 
-const AlternateGrid = ({ slice }) => {
+const AlternateGrid = ({ slice, linkResolver }) => {
   const { items, primary } = slice
   const { theme } = useThemeUI()
   const defaultColumnSizes = ['40% 60%', '60% 40%']
@@ -45,7 +45,10 @@ const AlternateGrid = ({ slice }) => {
               <Box as="header">
                 {primary.eyebrow_headline && (
                   <Eyebrow sx={{ textAlign: 'left' }}>
-                    <RichText render={primary.eyebrow_headline} />
+                    <RichText
+                      render={primary.eyebrow_headline}
+                      linkResolver={linkResolver}
+                    />
                   </Eyebrow>
                 )}
                 {primary.title && (
@@ -55,12 +58,18 @@ const AlternateGrid = ({ slice }) => {
                       mb: [0, 0],
                     }}
                   >
-                    <RichText render={primary.title} />
+                    <RichText
+                      render={primary.title}
+                      linkResolver={linkResolver}
+                    />
                   </Title>
                 )}
                 {primary.description && (
                   <Desc sx={{ textAlign: 'left', mx: 0 }}>
-                    <RichText render={primary.description} />
+                    <RichText
+                      render={primary.description}
+                      linkResolver={linkResolver}
+                    />
                   </Desc>
                 )}
               </Box>
@@ -78,6 +87,7 @@ const AlternateGrid = ({ slice }) => {
                       title={title}
                       description={description}
                       icon={optionalIcon}
+                      linkResolver={linkResolver}
                     />
                   )
                 }
@@ -114,6 +124,11 @@ AlternateGrid.propTypes = {
     }).isRequired,
     items: PropTypes.array.isRequired,
   }).isRequired,
+  linkResolver: PropTypes.func,
+}
+
+AlternateGrid.defaultProps = {
+  linkResolver: () => '/404',
 }
 
 export default AlternateGrid

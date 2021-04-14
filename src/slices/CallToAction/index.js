@@ -35,12 +35,12 @@ const CallToAction = ({
               />
             </Box>
           )}
-          <RichText render={primary.title} />
+          <RichText render={primary.title} linkResolver={linkResolver} />
         </Box>
 
         {primary.paragraph && (
           <Desc>
-            <RichText render={primary.paragraph} />
+            <RichText render={primary.paragraph} linkResolver={linkResolver} />
           </Desc>
         )}
 

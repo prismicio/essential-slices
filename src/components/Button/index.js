@@ -34,7 +34,11 @@ function Button({ link, label, linkResolver, ...props }) {
       __css={buttonStyles}
       {...linkProps}
     >
-      {typeof label === 'string' ? label : <RichText render={label} />}
+      {typeof label === 'string' ? (
+        label
+      ) : (
+        <RichText render={label} linkResolver={linkResolver} />
+      )}
     </Box>
   )
 }
